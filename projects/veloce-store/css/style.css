@@ -1316,6 +1316,12 @@ body {
   padding: 1.5rem;
 }
 
+.qv-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 /* Checkout Form */
 .form-grid-2 {
   display: grid;
@@ -1583,5 +1589,145 @@ body {
   }
   .nav-search-bar {
     display: none;
+  }
+  .top-announcement span:last-child {
+    display: none;
+  }
+  .top-bar-inner {
+    justify-content: space-between;
+  }
+  .catalog-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .brand-filter-pills {
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .brand-filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+  .dropdown-filters-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .select-custom {
+    width: 100%;
+  }
+  .qv-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  #qv-product-img {
+    height: 280px !important;
+  }
+  .hero-editorial-card {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  .hero-editorial-card {
+    padding: 1.5rem 0.85rem;
+    border-radius: 12px;
+  }
+  .hero-main-title {
+    font-size: clamp(1.6rem, 7vw, 2.3rem);
+    line-height: 1.15;
+  }
+  .hero-drop-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .hero-brand-logos {
+    gap: 0.35rem;
+  }
+  .brand-pill-mini {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+  .countdown-timer-grid {
+    gap: 0.4rem;
+  }
+  .countdown-segment {
+    padding: 0.6rem 0.25rem;
+  }
+  .count-val {
+    font-size: 1.35rem;
+  }
+  .count-lbl {
+    font-size: 0.6rem;
+  }
+  .countdown-cta-btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .veloce-drawer {
+    width: 100%;
+    max-width: 100vw;
+  }
+  .veloce-modal-dialog {
+    width: 95%;
+    max-height: 88vh;
+    margin: 1rem auto;
+  }
+  .modal-body-content {
+    padding: 1rem 0.85rem;
+  }
+  .btn-drawer-checkout,
+  .btn-confirm-order,
+  .filter-tab-btn,
+  .btn-nav-bag,
+  .btn-icon-nav {
+    min-height: 44px;
+  }
+  .card-info {
+    padding: 1.15rem;
+  }
+  #veloce-toast-container {
+    right: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+  }
+  .veloce-toast {
+    width: 100%;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-subtitle {
+    display: none;
+  }
+  .brand-title {
+    font-size: 1.15rem;
+  }
+  .top-link span {
+    display: none;
+  }
+  .top-announcement {
+    font-size: 0.72rem;
+  }
+  .countdown-timer-grid {
+    gap: 0.25rem;
+  }
+  .count-val {
+    font-size: 1.15rem;
+  }
+  .receipt-header-row {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }

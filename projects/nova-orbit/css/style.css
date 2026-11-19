@@ -1784,3 +1784,90 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    line-height: 1.15;
+  }
+  
+  .hero-visual-frame {
+    max-width: 250px;
+  }
+  
+  .hero-stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  
+  .stat-count {
+    font-size: 1.4rem;
+  }
+  
+  .stat-label {
+    font-size: 0.72rem;
+  }
+  
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-cta-group .btn-space {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+  
+  .filter-tabs-wrapper {
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-tab-btn {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.78rem;
+  }
+  
+  .modal-window {
+    width: 95%;
+    padding: 1.25rem 1rem;
+    max-height: 88vh;
+  }
+  
+  .modal-grid-specs {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .hud-tab-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-brand .brand-title {
+    font-size: 1rem;
+  }
+  
+  .nav-brand .brand-subtitle {
+    display: none;
+  }
+  
+  .nav-back-portfolio span {
+    display: none;
+  }
+  
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+  }
+}
+
