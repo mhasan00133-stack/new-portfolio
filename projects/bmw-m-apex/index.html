@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW M-APEX — The Apex of Motorsport Engineering</title>
+  <meta name="description" content="Ultra-dynamic BMW M-Series luxury sports car experience featuring 60fps motion canvas, GSAP scroll animations, 360° configurator, live RPM rev gauge, synthesized V8 engine audio, and Netlify serverless VIP booking.">
+
+  <!-- Favicon / Roundel -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%230066b1'/><path d='M16 2A14 14 0 0 1 30 16H16z' fill='%23ffffff'/><path d='M2 16A14 14 0 0 1 16 2v14z' fill='%230066b1'/><path d='M16 30A14 14 0 0 1 2 16h14z' fill='%23ffffff'/><path d='M30 16A14 14 0 0 1 16 30V16z' fill='%230066b1'/></svg>">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Isolated BMW M-APEX Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Dynamic Motion Canvas Background -->
+  <canvas id="motion-canvas" aria-hidden="true"></canvas>
+
+  <div class="main-content">
+    <!-- M Tri-Color Signature Strip -->
+    <div class="m-ribbon-bar" aria-hidden="true"></div>
+
+    <!-- Navigation Bar -->
+    <header class="apex-navbar">
+      <div class="container nav-container">
+        <div class="nav-brand-group">
+          <a href="#hero" class="brand-link" aria-label="BMW M-APEX Home">
+            <div class="bmw-roundel" aria-hidden="true">
+              <div class="roundel-quadrant q-tl"></div>
+              <div class="roundel-quadrant q-tr"></div>
+              <div class="roundel-quadrant q-bl"></div>
+              <div class="roundel-quadrant q-br"></div>
+            </div>
+            <span class="brand-name">BMW <span>M-APEX</span></span>
+          </a>
+          <a href="/" class="nav-back-portfolio" title="Return to Portfolio">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Portfolio</span>
+          </a>
+        </div>
+
+        <nav>
+          <ul class="apex-nav-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#showroom">M Lineup</a></li>
+            <li><a href="#engineering">Aerodynamics</a></li>
+            <li><a href="#configurator">360° Studio</a></li>
+            <li><a href="#cockpit">Cockpit &amp; Rev</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button type="button" class="btn-sound-toggle" id="btn-sound-toggle" aria-pressed="false" title="Toggle Synthesized Engine Audio">
+            <i class="fa-solid fa-volume-xmark"></i>
+            <span class="sound-label">M Audio: Off</span>
+          </button>
+          <button type="button" class="btn-nav-vip btn-open-booking">
+            <i class="fa-solid fa-flag-checkered"></i>
+            <span>Book VIP Drive</span>
+          </button>
+          <button type="button" class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-badge-wrap">
+            <span class="m-strip-mini" aria-hidden="true"></span>
+            <span>BMW M MOTORSPORT DIVISION • 2026</span>
+          </div>
+
+          <h1 class="hero-title-main">
+            THE APEX OF <span class="accent-red">M MOTORSPORT</span> ENGINEERING
+          </h1>
+
+          <p class="hero-tagline">
+            Born on the Nürburgring Nordschleife. Where unbridled TwinPower V8 turbo power meets active carbon aerodynamics and surgical handling precision.
+          </p>
+
+          <!-- Real-Time Telemetry Stats -->
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <div class="stat-value">2.6<span>s</span></div>
+              <div class="stat-label">0-100 km/h</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">640<span>HP</span></div>
+              <div class="stat-label">Twin-Turbo Hybrid</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">1,000<span>Nm</span></div>
+              <div class="stat-label">Instant Torque</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">345<span>km/h</span></div>
+              <div class="stat-label">V-Max Top Speed</div>
+            </div>
+          </div>
+
+          <!-- Hero Car Visual Stage (Custom High-Resolution Vector Aerodynamic Profile) -->
+          <div class="hero-car-stage">
+            <div class="hero-car-svg-wrap">
+              <svg viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BMW M-Apex Flagship Sports Car">
+                <defs>
+                  <linearGradient id="hero-car-grad" x1="100" y1="80" x2="800" y2="260" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#164e3b"/>
+                    <stop offset="45%" stop-color="#0e3427"/>
+                    <stop offset="100%" stop-color="#051710"/>
+                  </linearGradient>
+                  <linearGradient id="hero-windshield-grad" x1="300" y1="80" x2="580" y2="180" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#0a121d" stop-opacity="0.95"/>
+                    <stop offset="100%" stop-color="#1e293b" stop-opacity="0.85"/>
+                  </linearGradient>
+                  <linearGradient id="hero-laser-light" x1="720" y1="160" x2="890" y2="175" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#38bdf8" stop-opacity="1"/>
+                    <stop offset="100%" stop-color="#0066b1" stop-opacity="0"/>
+                  </linearGradient>
+                  <radialGradient id="hero-ground-glow" cx="450" cy="280" r="350" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#1c69d4" stop-opacity="0.25"/>
+                    <stop offset="60%" stop-color="#0066b1" stop-opacity="0.08"/>
+                    <stop offset="100%" stop-color="#050608" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- Ground Shadow & Aerodynamic Neon Glow -->
+                <ellipse cx="450" cy="275" rx="420" ry="24" fill="url(#hero-ground-glow)"/>
+                <ellipse cx="450" cy="272" rx="380" ry="14" fill="#000" opacity="0.85"/>
+
+                <!-- Laser Headlight Beam Radiation -->
+                <polygon points="760,178 900,165 900,210 770,188" fill="url(#hero-laser-light)" opacity="0.6"/>
+
+                <!-- Main Car Bodywork Chassis -->
+                <path d="M70 215 C110 215 130 190 190 190 C240 190 280 145 350 115 C440 85 570 85 640 120 C700 150 760 170 810 180 C845 186 865 205 845 225 C820 235 770 235 745 235 C730 200 660 200 645 235 L335 235 C320 200 250 200 235 235 L120 235 C85 235 65 228 70 215 Z" fill="url(#hero-car-grad)" stroke="#22c55e" stroke-width="1.5" stroke-opacity="0.4"/>
+
+                <!-- Roofline & Carbon Fiber Canopy Glass -->
+                <path d="M355 120 C420 95 550 95 625 125 C660 142 675 168 670 178 L330 178 C335 155 345 130 355 120 Z" fill="url(#hero-windshield-grad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4"/>
+                <line x1="490" y1="98" x2="480" y2="178" stroke="#050608" stroke-width="6"/>
+
+                <!-- Carbon Aerodynamic Splitter & Side Skirt -->
+                <path d="M60 230 L110 230 L240 238 L640 238 L755 230 L855 230 L840 240 L70 240 Z" fill="#0d1117" stroke="#334155" stroke-width="1"/>
+
+                <!-- Rear Carbon Wing Spoiler -->
+                <path d="M75 170 L145 170 L155 178 L65 178 Z" fill="#111827"/>
+                <line x1="95" y1="178" x2="105" y2="210" stroke="#475569" stroke-width="3"/>
+                <line x1="130" y1="178" x2="135" y2="205" stroke="#475569" stroke-width="3"/>
+
+                <!-- Front Laser Headlight Cluster -->
+                <polygon points="780,175 830,182 815,190 770,185" fill="#38bdf8" opacity="0.95"/>
+                <polygon points="785,178 820,184 810,188 775,185" fill="#ffffff"/>
+
+                <!-- Rear M LED Taillight Signature -->
+                <path d="M80 198 L135 198 L125 204 L75 204 Z" fill="#e22718" filter="drop-shadow(0 0 6px #e22718)"/>
+
+                <!-- Front Wheel Assembly (Style 826M Forged) -->
+                <circle cx="690" cy="235" r="48" fill="#0a0c10" stroke="#334155" stroke-width="3"/>
+                <circle cx="690" cy="235" r="38" fill="#151b26"/>
+                <!-- Ceramic Brake Rotor & Caliper -->
+                <circle cx="690" cy="235" r="28" fill="#2d3748" stroke="#4a5568" stroke-dasharray="4 2"/>
+                <path d="M674 218 A22 22 0 0 1 706 218 L700 226 A14 14 0 0 0 680 226 Z" fill="#eab308"/>
+                <!-- Forged Spoke Pattern -->
+                <circle cx="690" cy="235" r="10" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+                <line x1="690" y1="197" x2="690" y2="273" stroke="#94a3b8" stroke-width="3"/>
+                <line x1="652" y1="235" x2="728" y2="235" stroke="#94a3b8" stroke-width="3"/>
+                <line x1="663" y1="208" x2="717" y2="262" stroke="#94a3b8" stroke-width="3"/>
+                <line x1="663" y1="262" x2="717" y2="208" stroke="#94a3b8" stroke-width="3"/>
+
+                <!-- Rear Wheel Assembly -->
+                <circle cx="185" cy="235" r="48" fill="#0a0c10" stroke="#334155" stroke-width="3"/>
+                <circle cx="185" cy="235" r="38" fill="#151b26"/>
+                <!-- Ceramic Brake Rotor & Caliper -->
+                <circle cx="185" cy="235" r="28" fill="#2d3748" stroke="#4a5568" stroke-dasharray="4 2"/>
+                <path d="M169 218 A22 22 0 0 1 201 218 L195 226 A14 14 0 0 0 175 226 Z" fill="#eab308"/>
+                <!-- Forged Spoke Pattern -->
+                <circle cx="185" cy="235" r="10" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+                <line x1="185" y1="197" x2="185" y2="273" stroke="#94a3b8" stroke-width="3"/>
+                <line x1="147" y1="235" x2="223" y2="235" stroke="#94a3b8" stroke-width="3"/>
+                <line x1="158" y1="208" x2="212" y2="262" stroke="#94a3b8" stroke-width="3"/>
+                <line x1="158" y1="262" x2="212" y2="208" stroke="#94a3b8" stroke-width="3"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#showroom" class="btn-apex btn-apex-primary">
+              <span>Explore M Models</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#configurator" class="btn-apex btn-apex-ghost">
+              <i class="fa-solid fa-sliders"></i>
+              <span>360° Studio Configurator</span>
+            </a>
+            <button type="button" class="btn-apex btn-apex-sound" id="btn-hero-rev">
+              <i class="fa-solid fa-bolt-lightning"></i>
+              <span>Quick Rev V8 Engine</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Model Showroom (M Lineup) -->
+    <section id="showroom" class="showroom-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">HIGH PERFORMANCE ARSENAL</span>
+          <h2 class="section-title">THE BMW M POWER DIVISION</h2>
+          <p class="section-desc">Four iconic apex predators tuned for track supremacy and bespoke executive luxury.</p>
+        </div>
+
+        <div class="showroom-grid">
+          <!-- Model 1: BMW M4 CS -->
+          <article class="showroom-card" data-model="m4-cs">
+            <div class="card-top-row">
+              <span class="card-model-badge">M4 SERIES</span>
+              <span class="card-mode-indicator"><i class="fa-solid fa-circle"></i> TRACK READY</span>
+            </div>
+            <h3 class="card-title">BMW M4 CS</h3>
+            <p class="card-tagline">High-Performance Track Weapon with Isle of Man Green Livery</p>
+
+            <div class="card-visual-frame">
+              <svg viewBox="0 0 440 180" class="card-car-svg" fill="none" role="img" aria-label="BMW M4 CS">
+                <ellipse cx="220" cy="155" rx="190" ry="12" fill="#000" opacity="0.8"/>
+                <path d="M40 130 C70 130 90 115 130 115 C160 115 190 85 240 68 C300 50 370 50 400 95 L415 135 L350 140 C340 115 290 115 280 140 L160 140 C150 115 100 115 90 140 L50 140 Z" fill="#164e3b" stroke="#22c55e" stroke-width="1.2"/>
+                <path d="M245 72 C285 58 350 58 385 85 L395 108 L230 108 Z" fill="#0f172a" stroke="#38bdf8" stroke-width="0.8"/>
+                <circle cx="125" cy="140" r="26" fill="#0a0c10" stroke="#64748b" stroke-width="2"/>
+                <circle cx="315" cy="140" r="26" fill="#0a0c10" stroke="#64748b" stroke-width="2"/>
+              </svg>
+            </div>
+
+            <div class="card-spec-grid">
+              <div class="card-spec-col">
+                <div class="spec-number">550 HP</div>
+                <div class="spec-sub">Twin-Turbo I6</div>
+              </div>
+              <div class="card-spec-col">
+                <div class="spec-number">3.4s</div>
+                <div class="spec-sub">0-100 km/h</div>
+              </div>
+              <div class="card-spec-col">
+                <div class="spec-number">$123,500</div>
+                <div class="spec-sub">Base MSRP</div>
+              </div>
+            </div>
+
+            <div class="card-action-row">
+              <button type="button" class="btn-card-action btn-quick-config">
+                <i class="fa-solid fa-palette"></i> Configure
+              </button>
+              <button type="button" class="btn-card-action btn-inspect-specs">
+                <i class="fa-solid fa-chart-line"></i> Full Specs
+              </button>
+            </div>
+          </article>
+
+          <!-- Model 2: BMW M8 Competition Gran Coupé -->
+          <article class="showroom-card" data-model="m8-comp">
+            <div class="card-top-row">
+              <span class="card-model-badge">M8 FLAGSHIP</span>
+              <span class="card-mode-indicator"><i class="fa-solid fa-circle"></i> SPORT+ ACTIVE</span>
+            </div>
+            <h3 class="card-title">BMW M8 Competition</h3>
+            <p class="card-tagline">Gran Coupé: The 625 HP TwinPower V8 Executive Titan</p>
+
+            <div class="card-visual-frame">
+              <svg viewBox="0 0 440 180" class="card-car-svg" fill="none" role="img" aria-label="BMW M8 Competition">
+                <ellipse cx="220" cy="155" rx="190" ry="12" fill="#000" opacity="0.8"/>
+                <path d="M35 132 C65 132 85 118 125 118 C155 118 185 88 235 70 C295 52 380 52 410 98 L420 135 L360 140 C350 115 300 115 290 140 L160 140 C150 115 100 115 90 140 L45 140 Z" fill="#1e293b" stroke="#64748b" stroke-width="1.2"/>
+                <path d="M240 74 C280 60 360 60 395 88 L405 110 L225 110 Z" fill="#0b0f17" stroke="#38bdf8" stroke-width="0.8"/>
+                <circle cx="125" cy="140" r="26" fill="#0a0c10" stroke="#e22718" stroke-width="2"/>
+                <circle cx="325" cy="140" r="26" fill="#0a0c10" stroke="#e22718" stroke-width="2"/>
+              </svg>
+            </div>
+
+            <div class="card-spec-grid">
+              <div class="card-spec-col">
+                <div class="spec-number">625 HP</div>
+                <div class="spec-sub">4.4L V8 Turbo</div>
+              </div>
+              <div class="card-spec-col">
+                <div class="spec-number">3.2s</div>
+                <div class="spec-sub">0-100 km/h</div>
+              </div>
+              <div class="card-spec-col">
+                <div class="spec-number">$138,800</div>
+                <div class="spec-sub">Base MSRP</div>
+              </div>
+            </div>
+
+            <div class="card-action-row">
+              <button type="button" class="btn-card-action btn-quick-config">
+                <i class="fa-solid fa-palette"></i> Configure
+              </button>
+              <button type="button" class="btn-card-action btn-inspect-specs">
+                <i class="fa-solid fa-chart-line"></i> Full Specs
+              </button>
+            </div>
+          </article>
+
+          <!-- Model 3: BMW M3 Touring Competition -->
+          <article class="showroom-card" data-model="m3-touring">
+            <div class="card-top-row">
+              <span class="card-model-badge">M3 TOURING</span>
+              <span class="card-mode-indicator"><i class="fa-solid fa-circle"></i> XDRIVE AWD</span>
+            </div>
+            <h3 class="card-title">BMW M3 Touring xDrive</h3>
+            <p class="card-tagline">510 HP All-Weather High-Speed Precision Long-Hauler</p>
+
+            <div class="card-visual-frame">
+              <svg viewBox="0 0 440 180" class="card-car-svg" fill="none" role="img" aria-label="BMW M3 Touring">
+                <ellipse cx="220" cy="155" rx="190" ry="12" fill="#000" opacity="0.8"/>
+                <path d="M35 130 L60 115 L120 115 L180 82 L340 82 L385 105 L415 135 L350 140 C340 115 290 115 280 140 L160 140 C150 115 100 115 90 140 L45 140 Z" fill="#1d4ed8" stroke="#38bdf8" stroke-width="1.2"/>
+                <circle cx="125" cy="140" r="26" fill="#0a0c10" stroke="#3b82f6" stroke-width="2"/>
+                <circle cx="315" cy="140" r="26" fill="#0a0c10" stroke="#3b82f6" stroke-width="2"/>
+              </svg>
+            </div>
+
+            <div class="card-spec-grid">
+              <div class="card-spec-col">
+                <div class="spec-number">510 HP</div>
+                <div class="spec-sub">M xDrive AWD</div>
+              </div>
+              <div class="card-spec-col">
+                <div class="spec-number">3.6s</div>
+                <div class="spec-sub">0-100 km/h</div>
+              </div>
+              <div class="card-spec-col">
+                <div class="spec-number">$115,000</div>
+                <div class="spec-sub">Base MSRP</div>
+              </div>
+            </div>
+
+            <div class="card-action-row">
+              <button type="button" class="btn-card-action btn-quick-config">
+                <i class="fa-solid fa-palette"></i> Configure
+              </button>
+              <button type="button" class="btn-card-action btn-inspect-specs">
+                <i class="fa-solid fa-chart-line"></i> Full Specs
+              </button>
+            </div>
+          </article>
+
+          <!-- Model 4: BMW M Hybrid V8 Hypercar -->
+          <article class="showroom-card" data-model="m-hybrid-v8">
+            <div class="card-top-row">
+              <span class="card-model-badge">LMDh HYPERCAR</span>
+              <span class="card-mode-indicator"><i class="fa-solid fa-circle"></i> LE MANS CLASS</span>
+            </div>
+            <h3 class="card-title">BMW M Hybrid V8</h3>
+            <p class="card-tagline">Pure Prototype Electrification built for Endurance Supremacy</p>
+
+            <div class="card-visual-frame">
+              <svg viewBox="0 0 440 180" class="card-car-svg" fill="none" role="img" aria-label="BMW M Hybrid V8 Prototype">
+                <ellipse cx="220" cy="155" rx="190" ry="12" fill="#000" opacity="0.8"/>
+                <path d="M25 135 L60 90 L140 90 L180 75 L310 75 L370 100 L425 130 L360 140 C350 115 300 115 290 140 L160 140 C150 115 100 115 90 140 L35 140 Z" fill="#050608" stroke="#e22718" stroke-width="1.4"/>
+                <line x1="120" y1="90" x2="160" y2="140" stroke="#0066b1" stroke-width="8"/>
+                <line x1="140" y1="90" x2="180" y2="140" stroke="#e22718" stroke-width="8"/>
+                <circle cx="125" cy="140" r="26" fill="#0a0c10" stroke="#eab308" stroke-width="2"/>
+                <circle cx="325" cy="140" r="26" fill="#0a0c10" stroke="#eab308" stroke-width="2"/>
+              </svg>
+            </div>
+
+            <div class="card-spec-grid">
+              <div class="card-spec-col">
+                <div class="spec-number">640 HP</div>
+                <div class="spec-sub">Hybrid V8</div>
+              </div>
+              <div class="card-spec-col">
+                <div class="spec-number">2.6s</div>
+                <div class="spec-sub">0-100 km/h</div>
+              </div>
+              <div class="card-spec-col">
+                <div class="spec-number">$285,000</div>
+                <div class="spec-sub">Motorsport Spec</div>
+              </div>
+            </div>
+
+            <div class="card-action-row">
+              <button type="button" class="btn-card-action btn-quick-config">
+                <i class="fa-solid fa-palette"></i> Configure
+              </button>
+              <button type="button" class="btn-card-action btn-inspect-specs">
+                <i class="fa-solid fa-chart-line"></i> Full Specs
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering & Aerodynamics Section -->
+    <section id="engineering" class="engineering-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">AERODYNAMIC DOMINANCE</span>
+          <h2 class="section-title">ENGINEERED FOR THE LIMIT</h2>
+          <p class="section-desc">Every vent, splitter, and carbon element serves one singular purpose: maximum downforce with minimal drag.</p>
+        </div>
+
+        <div class="aero-display-card">
+          <div class="aero-grid">
+            <div class="aero-visual-container">
+              <svg viewBox="0 0 600 240" fill="none" role="img" aria-label="BMW M Aerodynamic Airflow Analysis">
+                <path d="M50 170 C90 170 120 140 180 140 C240 140 280 90 350 70 C430 45 520 45 550 120 L580 170 L50 170 Z" fill="#0d1117" stroke="#0066b1" stroke-width="2"/>
+                <!-- Streamline airflows -->
+                <path d="M10 60 Q 250 40, 590 140" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4" opacity="0.8"/>
+                <path d="M10 90 Q 280 70, 590 160" stroke="#0066b1" stroke-width="2" stroke-dasharray="6 4" opacity="0.6"/>
+                <path d="M10 130 Q 320 110, 590 175" stroke="#e22718" stroke-width="2" stroke-dasharray="6 4" opacity="0.8"/>
+              </svg>
+
+              <!-- Interactive Hotspot Badges -->
+              <div class="hotspot-badge hs-1"><i class="fa-solid fa-crosshairs"></i> Carbon Roof Core</div>
+              <div class="hotspot-badge hs-2"><i class="fa-solid fa-crosshairs"></i> M Ceramic Brakes</div>
+              <div class="hotspot-badge hs-3"><i class="fa-solid fa-crosshairs"></i> Adaptive Suspension</div>
+              <div class="hotspot-badge hs-4"><i class="fa-solid fa-crosshairs"></i> Active Aero Diffuser</div>
+            </div>
+
+            <div class="aero-specs-list">
+              <div class="aero-spec-box">
+                <h4><i class="fa-solid fa-shield-halved"></i> M Carbon Ceramic Brakes</h4>
+                <p>400mm drilled ceramic composite discs with 6-piston fixed calipers for fade-free stopping power from 300 km/h.</p>
+              </div>
+
+              <div class="aero-spec-box">
+                <h4><i class="fa-solid fa-wave-square"></i> Adaptive M Suspension Pro</h4>
+                <p>48V electro-mechanical active roll stabilization reacts in milliseconds to cornering forces, keeping the chassis razor-flat.</p>
+              </div>
+
+              <div class="aero-spec-box">
+                <h4><i class="fa-solid fa-rotate"></i> M xDrive with 2WD Drift Mode</h4>
+                <p>Rear-biased intelligent all-wheel drive with active M differential. Toggle into pure 2WD for unadulterated track sliding.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 360° Studio Configurator -->
+    <section id="configurator" class="configurator-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">BESPOKE SPECIFICATION</span>
+          <h2 class="section-title">360° M CUSTOMIZER STUDIO</h2>
+          <p class="section-desc">Tailor exterior finishes, lightweight forged alloys, and motorsport packages in real time.</p>
+        </div>
+
+        <div class="configurator-frame">
+          <!-- Model Selection Header -->
+          <div class="config-header-tabs">
+            <button type="button" class="model-tab-btn active" data-model="m4-cs">BMW M4 CS</button>
+            <button type="button" class="model-tab-btn" data-model="m8-comp">BMW M8 Competition</button>
+            <button type="button" class="model-tab-btn" data-model="m3-touring">BMW M3 Touring</button>
+            <button type="button" class="model-tab-btn" data-model="m-hybrid-v8">M Hybrid V8 LMDh</button>
+          </div>
+
+          <div class="config-body-grid">
+            <!-- Stage View with SVG Renderer -->
+            <div class="config-stage-view">
+              <div class="config-canvas-render">
+                <svg viewBox="0 0 650 250" class="config-car-svg" fill="none" role="img" aria-label="BMW M Configured Vehicle">
+                  <defs>
+                    <radialGradient id="config-ambient" cx="325" cy="220" r="280" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3" class="svg-car-ambient"/>
+                      <stop offset="100%" stop-color="#050608" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+
+                  <ellipse cx="325" cy="215" rx="290" ry="18" fill="url(#config-ambient)"/>
+                  <ellipse cx="325" cy="210" rx="260" ry="10" fill="#000" opacity="0.85"/>
+
+                  <!-- Dynamic Bodywork Fill -->
+                  <path class="svg-car-body" d="M50 170 C80 170 100 150 150 150 C190 150 220 115 270 92 C340 68 440 68 495 95 C540 118 580 135 620 142 C645 148 660 162 645 178 C625 186 585 186 565 186 C550 160 500 160 485 186 L265 186 C250 160 200 160 185 186 L90 186 C65 186 50 180 50 170 Z" fill="#164e3b" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.3"/>
+
+                  <!-- Carbon Canopy & Aerodynamics -->
+                  <path d="M275 96 C325 76 425 76 480 100 C510 114 520 135 515 142 L255 142 C260 125 268 105 275 96 Z" fill="#0f172a" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.4"/>
+                  
+                  <!-- Carbon Aero Splitter (Toggled via Package) -->
+                  <path class="svg-carbon-aero" d="M45 182 L85 182 L190 188 L485 188 L570 182 L650 182 L635 190 L50 190 Z" fill="#0d1117" stroke="#475569" stroke-width="1"/>
+
+                  <!-- Wheels & Dynamic Calipers -->
+                  <circle cx="525" cy="186" r="38" fill="#0a0c10" stroke="#475569" stroke-width="2"/>
+                  <circle cx="525" cy="186" r="28" fill="#1e293b"/>
+                  <path class="svg-caliper" d="M512 172 A18 18 0 0 1 538 172 L533 178 A10 10 0 0 0 517 178 Z" fill="#eab308"/>
+                  <circle cx="525" cy="186" r="8" fill="#64748b"/>
+
+                  <circle cx="225" cy="186" r="38" fill="#0a0c10" stroke="#475569" stroke-width="2"/>
+                  <circle cx="225" cy="186" r="28" fill="#1e293b"/>
+                  <path class="svg-caliper" d="M212 172 A18 18 0 0 1 238 172 L233 178 A10 10 0 0 0 217 178 Z" fill="#eab308"/>
+                  <circle cx="225" cy="186" r="8" fill="#64748b"/>
+                </svg>
+              </div>
+
+              <!-- Quick Specs Bar -->
+              <div class="config-quick-specs">
+                <div class="config-spec-pill">
+                  <div class="pill-val" id="config-spec-engine">3.0L M TwinTurbo I6</div>
+                  <div class="pill-lbl">Engine Configuration</div>
+                </div>
+                <div class="config-spec-pill">
+                  <div class="pill-val" id="config-spec-power">550 HP / 650 Nm</div>
+                  <div class="pill-lbl">Peak Output</div>
+                </div>
+                <div class="config-spec-pill">
+                  <div class="pill-val" id="config-spec-accel">3.4s (0-100)</div>
+                  <div class="pill-lbl">Acceleration</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Customizer Controls Pane -->
+            <div class="config-controls-pane">
+              <div>
+                <div class="control-group-title">
+                  <span>Exterior Finish</span>
+                  <span class="sub" id="config-color-name">Metallic Palette</span>
+                </div>
+                <div class="color-swatches-grid">
+                  <div class="color-swatch active" data-color="isle-of-man" style="background: #164e3b;" title="Isle of Man Green Metallic"></div>
+                  <div class="color-swatch" data-color="marina-bay" style="background: #1d4ed8;" title="Marina Bay Blue Metallic"></div>
+                  <div class="color-swatch" data-color="toronto-red" style="background: #b91c1c;" title="Toronto Red Metallic"></div>
+                  <div class="color-swatch" data-color="frozen-black" style="background: #111318;" title="Frozen Black Metallic (Matte)"></div>
+                  <div class="color-swatch" data-color="sao-paulo" style="background: #eab308;" title="Sao Paulo Yellow"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="control-group-title">
+                  <span>M Forged Wheel Styles</span>
+                </div>
+                <div class="wheel-options-list">
+                  <button type="button" class="wheel-option-btn active" data-wheel="style-826m">
+                    <span>19"/20" M Forged Style 826M Bicolor</span>
+                    <span>Included</span>
+                  </button>
+                  <button type="button" class="wheel-option-btn" data-wheel="style-1000m">
+                    <span>20"/21" M Style 1000M Frozen Bronze</span>
+                    <span>+$4,200</span>
+                  </button>
+                  <button type="button" class="wheel-option-btn" data-wheel="style-827m">
+                    <span>19"/20" M Style 827M Stealth Jet Black</span>
+                    <span>+$1,800</span>
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <div class="control-group-title">
+                  <span>M Performance Packages</span>
+                </div>
+                <div class="packages-list">
+                  <label class="package-item">
+                    <span>M Carbon Ceramic Brakes (Gold Calipers)</span>
+                    <input type="checkbox" id="pkg-ceramic" checked>
+                  </label>
+                  <label class="package-item">
+                    <span>M Carbon Fiber Exterior Package</span>
+                    <input type="checkbox" id="pkg-carbon" checked>
+                  </label>
+                  <label class="package-item">
+                    <span>M Driver's Package (305 km/h Unlock)</span>
+                    <input type="checkbox" id="pkg-drivers" checked>
+                  </label>
+                </div>
+              </div>
+
+              <div class="config-summary-box">
+                <div class="summary-price-row">
+                  <div>
+                    <div class="summary-lbl">Build Code: <span id="config-build-code">M-APEX-8921</span></div>
+                    <div class="summary-lbl">Calculated MSRP</div>
+                  </div>
+                  <div class="summary-val" id="config-calculated-price">$139,900</div>
+                </div>
+
+                <div class="config-btn-group">
+                  <button type="button" class="btn-config-save" id="btn-save-build">
+                    <i class="fa-solid fa-bookmark"></i> Save Custom Build Code
+                  </button>
+                  <button type="button" class="btn-config-book" id="btn-book-with-build">
+                    <i class="fa-solid fa-flag-checkered"></i> Book Drive with This Build
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cockpit & Live RPM Rev Meter -->
+    <section id="cockpit" class="cockpit-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">DIGITAL TELEMETRY COCKPIT</span>
+          <h2 class="section-title">FEEL THE 7,200 RPM REDLINE</h2>
+          <p class="section-desc">Experience dynamic shift lights, engine audio roar, and simulated V-Max acceleration.</p>
+        </div>
+
+        <div class="cockpit-card">
+          <!-- Sequential F1 Shift LEDs -->
+          <div class="shift-light-bar" aria-label="Sequential Shift Lights">
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+            <div class="shift-led"></div>
+          </div>
+
+          <div class="cockpit-display-grid">
+            <!-- Left Telemetry Cluster -->
+            <div class="telemetry-cluster">
+              <div class="cluster-title">Active Dynamics</div>
+              <div class="telemetry-row">
+                <span>Gear Selection:</span>
+                <span class="val" id="cockpit-gear-value">P</span>
+              </div>
+              <div class="telemetry-row">
+                <span>Oil Temp:</span>
+                <span class="val">102 °C</span>
+              </div>
+              <div class="telemetry-row">
+                <span>Lateral G-Force:</span>
+                <span class="val">1.35 G</span>
+              </div>
+            </div>
+
+            <!-- Central Tachometer Arc Gauge -->
+            <div class="gauge-wrapper">
+              <svg viewBox="0 0 200 200" class="gauge-svg">
+                <circle cx="100" cy="100" r="80" class="gauge-bg-arc"/>
+                <circle cx="100" cy="100" r="80" class="gauge-redline-arc"/>
+              </svg>
+              <div class="gauge-needle" id="tach-needle"></div>
+              <div class="gauge-center-cap"></div>
+              <div class="gauge-digital-readout">
+                <div class="digital-rpm-num" id="cockpit-rpm-value">800</div>
+                <div class="digital-rpm-lbl">RPM x 1000</div>
+              </div>
+            </div>
+
+            <!-- Right Telemetry Cluster -->
+            <div class="telemetry-cluster">
+              <div class="cluster-title">Speed Telemetry</div>
+              <div class="telemetry-row">
+                <span>Current Speed:</span>
+                <span class="val"><span id="cockpit-speed-value">0</span> km/h</span>
+              </div>
+              <div class="telemetry-row">
+                <span>Turbo Boost:</span>
+                <span class="val">1.95 Bar</span>
+              </div>
+              <div class="telemetry-row">
+                <span>Traction Mode:</span>
+                <span class="val" style="color: #38bdf8;">MDM Active</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls: Throttle Pedal & Drive Modes -->
+          <div class="cockpit-controls-row">
+            <div class="drive-modes-wrap">
+              <span style="font-family: var(--font-tech); font-size: 0.8rem; color: var(--text-muted);">M DRIVE MODE:</span>
+              <button type="button" class="drive-mode-pill" data-mode="COMFORT">COMFORT</button>
+              <button type="button" class="drive-mode-pill active" data-mode="SPORT">SPORT</button>
+              <button type="button" class="drive-mode-pill" data-mode="TRACK">TRACK</button>
+            </div>
+
+            <button type="button" class="btn-throttle-rev" id="btn-throttle-rev">
+              <i class="fa-solid fa-gauge-high"></i>
+              <span>HOLD TO ACCELERATE / REV</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="apex-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <span>BMW M-APEX</span> • High-Performance Digital Experience
+        </div>
+        <div class="footer-disclaimer">
+          Connected to Netlify Serverless Backend. Pure Frontend UI with GSAP, HTML5 Canvas &amp; Web Audio API.
+        </div>
+        <a href="/" class="nav-back-portfolio">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Return to Portfolio</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button type="button" class="btn-scroll-top" id="btn-scroll-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- =========================================================================
+       MODALS
+       ========================================================================= -->
+
+  <!-- 1. VIP Test Drive Booking Modal (Netlify Function Connected) -->
+  <div class="apex-modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-booking-title">
+    <div class="modal-content-box">
+      <div class="modal-header-strip"></div>
+      <div class="modal-header">
+        <h3 id="modal-booking-title"><i class="fa-solid fa-flag-checkered" style="color: var(--m-blue-light); margin-right: 0.5rem;"></i> Reserve VIP Track Session</h3>
+        <button type="button" class="modal-close-btn" id="modal-booking-close" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="apex-form-notice" id="booking-build-attached-notice" style="display: none;"></div>
+
+        <form id="test-drive-form">
+          <div class="apex-form-group">
+            <label for="book-name">Full Name *</label>
+            <input type="text" id="book-name" class="apex-input" placeholder="e.g. Marcus Vance" required minlength="2">
+          </div>
+
+          <div class="apex-form-group">
+            <label for="book-email">VIP Contact Email *</label>
+            <input type="email" id="book-email" class="apex-input" placeholder="e.g. pilot@bmw-m.com" required>
+          </div>
+
+          <div class="apex-form-group">
+            <label for="book-phone">Phone / Mobile Number</label>
+            <input type="tel" id="book-phone" class="apex-input" placeholder="+1 (555) 019-2834">
+          </div>
+
+          <div class="apex-form-group">
+            <label for="book-model-select">Selected M Model *</label>
+            <select id="book-model-select" class="apex-select">
+              <option value="BMW M4 CS">BMW M4 CS (550 HP)</option>
+              <option value="BMW M8 Competition Gran Coupé">BMW M8 Competition Gran Coupé (625 HP)</option>
+              <option value="BMW M3 Touring Competition xDrive">BMW M3 Touring Competition (510 HP)</option>
+              <option value="BMW M Hybrid V8 LMDh Hypercar">BMW M Hybrid V8 LMDh Hypercar (640 HP)</option>
+            </select>
+          </div>
+
+          <div class="apex-form-group">
+            <label for="book-track-select">Certified Experience Circuit *</label>
+            <select id="book-track-select" class="apex-select">
+              <option value="Nürburgring Nordschleife Experience Center (Germany)">Nürburgring Nordschleife Experience Center (Germany)</option>
+              <option value="BMW M Performance Center Spartanburg (USA)">BMW M Performance Center Spartanburg (USA)</option>
+              <option value="Silverstone GP Circuit M Pavilion (UK)">Silverstone GP Circuit M Pavilion (UK)</option>
+              <option value="Dubai Autodrome M VIP Lounge (UAE)">Dubai Autodrome M VIP Lounge (UAE)</option>
+            </select>
+          </div>
+
+          <div class="apex-form-group">
+            <label for="book-date">Preferred Track Session Date *</label>
+            <input type="date" id="book-date" class="apex-input" required value="2026-12-05">
+          </div>
+
+          <button type="submit" class="btn-config-book" style="width: 100%; margin-top: 1rem;">
+            <i class="fa-solid fa-signature"></i>
+            <span>Confirm VIP Test Drive Reservation</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. VIP Boarding Pass Confirmation Modal -->
+  <div class="apex-modal" id="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-confirm-title">
+    <div class="modal-content-box">
+      <div class="modal-header-strip"></div>
+      <div class="modal-header">
+        <h3 id="modal-confirm-title"><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 0.5rem;"></i> VIP Pass Issued</h3>
+        <button type="button" class="modal-close-btn" id="modal-confirm-close" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="vip-pass-card">
+          <div class="pass-header">
+            <div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">BMW M VIP TRACK DOSSIER</div>
+              <div class="pass-id-badge" id="pass-booking-id">M-APEX-X92A1</div>
+            </div>
+            <div class="bmw-roundel" style="width: 32px; height: 32px;" aria-hidden="true">
+              <div class="roundel-quadrant q-tl"></div>
+              <div class="roundel-quadrant q-tr"></div>
+              <div class="roundel-quadrant q-bl"></div>
+              <div class="roundel-quadrant q-br"></div>
+            </div>
+          </div>
+
+          <div class="pass-grid">
+            <div class="pass-item">
+              <label>Pilot Name</label>
+              <div id="pass-driver-name">Marcus Vance</div>
+            </div>
+            <div class="pass-item">
+              <label>Designated Machine</label>
+              <div id="pass-model">BMW M4 CS</div>
+            </div>
+            <div class="pass-item">
+              <label>Circuit</label>
+              <div id="pass-track">Nürburgring Nordschleife</div>
+            </div>
+            <div class="pass-item">
+              <label>Session Date</label>
+              <div id="pass-date">2026-12-05</div>
+            </div>
+            <div class="pass-item">
+              <label>Build Code Attached</label>
+              <div id="pass-build-code">M-APEX-8921</div>
+            </div>
+            <div class="pass-item">
+              <label>Instructor</label>
+              <div style="color: #38bdf8;">BMW M Certified Pilot</div>
+            </div>
+          </div>
+
+          <div class="pass-barcode" aria-hidden="true">
+            <div class="pass-bar" style="width: 4px;"></div>
+            <div class="pass-bar" style="width: 2px;"></div>
+            <div class="pass-bar" style="width: 6px;"></div>
+            <div class="pass-bar" style="width: 3px;"></div>
+            <div class="pass-bar" style="width: 8px;"></div>
+            <div class="pass-bar" style="width: 2px;"></div>
+            <div class="pass-bar" style="width: 5px;"></div>
+            <div class="pass-bar" style="width: 4px;"></div>
+            <div class="pass-bar" style="width: 7px;"></div>
+            <div class="pass-bar" style="width: 2px;"></div>
+            <div class="pass-bar" style="width: 5px;"></div>
+            <div class="pass-bar" style="width: 3px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Specs Comparison Modal -->
+  <div class="apex-modal" id="specs-modal" role="dialog" aria-modal="true" aria-labelledby="modal-specs-title">
+    <div class="modal-content-box">
+      <div class="modal-header-strip"></div>
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-specs-title">BMW M4 CS</h3>
+          <p id="modal-specs-tagline" style="font-size: 0.85rem; color: var(--text-secondary);"></p>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-specs-close" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="aero-spec-box">
+            <h4>Powertrain &amp; Displacement</h4>
+            <p id="modal-spec-engine">3.0L M TwinPower Turbo Inline-6</p>
+          </div>
+          <div class="aero-spec-box">
+            <h4>Horsepower &amp; Torque</h4>
+            <p id="modal-spec-power">550 HP / 650 Nm</p>
+          </div>
+          <div class="aero-spec-box">
+            <h4>0 - 100 km/h Sprint</h4>
+            <p id="modal-spec-accel">3.4 Seconds</p>
+          </div>
+          <div class="aero-spec-box">
+            <h4>V-Max Top Speed</h4>
+            <p id="modal-spec-speed">302 km/h (M Driver's Package)</p>
+          </div>
+          <div class="aero-spec-box">
+            <h4>Base Manufacturer MSRP</h4>
+            <p id="modal-spec-price" style="font-family: var(--font-tech); color: #fff; font-size: 1.2rem; font-weight: 700;">$123,500</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP 3 & ScrollTrigger via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Motion Canvas & Application Logic -->
+  <script src="js/motion-canvas.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

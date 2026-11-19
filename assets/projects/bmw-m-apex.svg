@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050608"/>
+      <stop offset="50%" stop-color="#0d111a"/>
+      <stop offset="100%" stop-color="#030406"/>
+    </linearGradient>
+
+    <!-- M Tri-Color Gradients -->
+    <linearGradient id="m-strip-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0066b1"/>
+      <stop offset="48%" stop-color="#1c69d4"/>
+      <stop offset="100%" stop-color="#e22718"/>
+    </linearGradient>
+
+    <radialGradient id="cyan-laser-glow" cx="400" cy="240" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0066b1" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#1c69d4" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#050608" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="car-paint-grad" x1="120" y1="180" x2="680" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#164e3b"/>
+      <stop offset="50%" stop-color="#0e3427"/>
+      <stop offset="100%" stop-color="#051710"/>
+    </linearGradient>
+
+    <linearGradient id="laser-beam" x1="580" y1="265" x2="780" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0066b1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Obsidian Background -->
+  <rect width="800" height="480" fill="url(#bg-grad)"/>
+
+  <!-- Radial Blue Glow -->
+  <rect width="800" height="480" fill="url(#cyan-laser-glow)"/>
+
+  <!-- High-Speed Perspective Perspective Lines -->
+  <line x1="400" y1="240" x2="0" y2="40" stroke="#0066b1" stroke-width="1.2" stroke-opacity="0.25"/>
+  <line x1="400" y1="240" x2="160" y2="0" stroke="#0066b1" stroke-width="1.2" stroke-opacity="0.2"/>
+  <line x1="400" y1="240" x2="640" y2="0" stroke="#1c69d4" stroke-width="1.2" stroke-opacity="0.2"/>
+  <line x1="400" y1="240" x2="800" y2="40" stroke="#e22718" stroke-width="1.2" stroke-opacity="0.3"/>
+  <line x1="400" y1="240" x2="800" y2="440" stroke="#e22718" stroke-width="1.5" stroke-opacity="0.35"/>
+  <line x1="400" y1="240" x2="0" y2="440" stroke="#0066b1" stroke-width="1.5" stroke-opacity="0.35"/>
+
+  <!-- Diagonal M Motorsport Accent Strip -->
+  <polygon points="620,0 655,0 525,480 490,480" fill="#0066b1" opacity="0.45"/>
+  <polygon points="655,0 675,0 545,480 525,480" fill="#1c69d4" opacity="0.6"/>
+  <polygon points="675,0 710,0 580,480 545,480" fill="#e22718" opacity="0.75"/>
+
+  <!-- Ground Road Surface Glow -->
+  <ellipse cx="400" cy="370" rx="340" ry="25" fill="#000" opacity="0.9"/>
+  <ellipse cx="400" cy="370" rx="360" ry="40" fill="#0066b1" opacity="0.15"/>
+
+  <!-- Laser Headlight Beam -->
+  <polygon points="610,265 790,250 790,305 620,278" fill="url(#laser-beam)"/>
+
+  <!-- Car Silhouette / Bodywork -->
+  <path d="M120 300 C160 300 180 270 230 270 C270 270 310 230 370 200 C450 168 560 168 620 200 C670 228 720 248 760 258 C785 264 795 285 780 305 C755 315 715 315 695 315 C680 280 620 280 605 315 L325 315 C310 280 250 280 235 315 L145 315 C125 315 115 310 120 300 Z" fill="url(#car-paint-grad)" stroke="#22c55e" stroke-width="1.8" stroke-opacity="0.6"/>
+
+  <!-- Cockpit Windshield & Roof Glass -->
+  <path d="M375 205 C430 178 540 178 605 208 C635 224 645 248 640 258 L350 258 C355 235 365 215 375 205 Z" fill="#0d1420" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
+
+  <!-- Carbon Rear Wing -->
+  <path d="M130 250 L190 250 L200 258 L120 258 Z" fill="#0a0c10"/>
+  <line x1="145" y1="258" x2="155" y2="290" stroke="#475569" stroke-width="3"/>
+  <line x1="175" y1="258" x2="180" y2="285" stroke="#475569" stroke-width="3"/>
+
+  <!-- Front Laser Headlight -->
+  <polygon points="730,255 770,262 755,270 720,265" fill="#38bdf8"/>
+  <polygon points="735,258 765,263 755,268 725,265" fill="#ffffff"/>
+
+  <!-- Rear M Taillight Signature -->
+  <path d="M130 278 L175 278 L165 284 L125 284 Z" fill="#e22718"/>
+
+  <!-- Front Wheel Assembly -->
+  <circle cx="650" cy="315" r="42" fill="#0a0c10" stroke="#334155" stroke-width="2.5"/>
+  <circle cx="650" cy="315" r="32" fill="#151b26"/>
+  <circle cx="650" cy="315" r="22" fill="#2d3748" stroke="#4a5568" stroke-dasharray="3 2"/>
+  <path d="M636 300 A18 18 0 0 1 664 300 L658 308 A12 12 0 0 0 642 308 Z" fill="#eab308"/>
+  <circle cx="650" cy="315" r="8" fill="#64748b"/>
+
+  <!-- Rear Wheel Assembly -->
+  <circle cx="200" cy="315" r="42" fill="#0a0c10" stroke="#334155" stroke-width="2.5"/>
+  <circle cx="200" cy="315" r="32" fill="#151b26"/>
+  <circle cx="200" cy="315" r="22" fill="#2d3748" stroke="#4a5568" stroke-dasharray="3 2"/>
+  <path d="M186 300 A18 18 0 0 1 214 300 L208 308 A12 12 0 0 0 192 308 Z" fill="#eab308"/>
+  <circle cx="200" cy="315" r="8" fill="#64748b"/>
+
+  <!-- Floating UI Header Badge -->
+  <g transform="translate(48, 48)">
+    <rect width="210" height="34" rx="6" fill="#0d111a" stroke="rgba(0,102,177,0.5)" stroke-width="1.2"/>
+    <rect x="12" y="14" width="22" height="6" rx="2" fill="url(#m-strip-grad)"/>
+    <text x="44" y="22" fill="#ffffff" font-family="'Orbitron', monospace, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">BMW M-APEX 2026</text>
+  </g>
+
+  <!-- Title & Specs Text -->
+  <g transform="translate(48, 120)">
+    <text x="0" y="0" fill="#ffffff" font-family="'Syne', sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">THE APEX OF MOTORSPORT</text>
+    <text x="0" y="28" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="14" font-weight="500">640 HP TwinPower Turbo Hybrid • 0-100 in 2.6s • GSAP &amp; Web Audio</text>
+  </g>
+
+  <!-- Bottom Telemetry Chips -->
+  <g transform="translate(48, 412)">
+    <rect width="130" height="36" rx="4" fill="#0a0d14" stroke="rgba(255,255,255,0.08)"/>
+    <text x="14" y="23" fill="#38bdf8" font-family="'Orbitron', monospace" font-size="12" font-weight="700">640 HP</text>
+    <text x="74" y="23" fill="#64748b" font-family="'Orbitron', monospace" font-size="10">HYBRID</text>
+
+    <rect x="145" width="130" height="36" rx="4" fill="#0a0d14" stroke="rgba(255,255,255,0.08)"/>
+    <text x="159" y="23" fill="#e22718" font-family="'Orbitron', monospace" font-size="12" font-weight="700">7,200</text>
+    <text x="215" y="23" fill="#64748b" font-family="'Orbitron', monospace" font-size="10">RPM</text>
+
+    <rect x="290" width="140" height="36" rx="4" fill="#0a0d14" stroke="rgba(255,255,255,0.08)"/>
+    <text x="304" y="23" fill="#10b981" font-family="'Orbitron', monospace" font-size="12" font-weight="700">SERVERLESS</text>
+    <text x="390" y="23" fill="#64748b" font-family="'Orbitron', monospace" font-size="10">API</text>
+  </g>
+</svg>
