@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NOVA ORBIT — Next-Generation Deep Space Exploration, Interactive Planetary Explorer & Live 60fps Orbital Telemetry Platform by Muhammad Hasan Sajid." />
+  <meta name="author" content="Muhammad Hasan Sajid" />
+  <title>NOVA ORBIT — Deep Space Exploration &amp; Live Telemetry Platform</title>
+
+  <!-- Google Typography Fonts: Space Grotesk, Orbitron & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Flagship Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Background 60fps Multi-Layer Parallax Starfield Canvas -->
+  <canvas id="space-canvas" aria-hidden="true"></canvas>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       1. GLASSMORHPIC STICKY NAVBAR
+       ═════════════════════════════════════════════════════════════════════ -->
+  <header class="space-navbar" id="navbar">
+    <div class="container nav-wrap">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="nav-brand" aria-label="Nova Orbit Home">
+        <div class="brand-icon-orbit">
+          <div class="brand-ring"></div>
+          <div class="brand-core"></div>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">NOVA ORBIT</span>
+          <span class="brand-subtitle">DEEP SPACE // TELEMETRY</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links-desktop">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#explorer" class="nav-link">Mission Explorer</a></li>
+        <li><a href="#telemetry" class="nav-link">Live Telemetry</a></li>
+        <li><a href="#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="#launch" class="nav-link">Launch Directive</a></li>
+      </ul>
+
+      <!-- Action Cluster -->
+      <div class="nav-actions">
+        <a href="../../index.html" class="nav-back-portfolio" title="Return to Portfolio">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Portfolio</span>
+        </a>
+        <a href="#launch" class="btn btn-glow-cyan" style="padding: 0.5rem 1.15rem; font-size: 0.82rem;">
+          <i class="fa-solid fa-rocket"></i>
+          <span>Deploy Payload</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="nav-toggle-btn" id="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <span class="brand-title" style="font-size: 1.4rem;">NOVA ORBIT</span>
+    </div>
+    <nav class="drawer-links">
+      <a href="#hero" class="drawer-link">01. Home</a>
+      <a href="#explorer" class="drawer-link">02. Mission Explorer</a>
+      <a href="#telemetry" class="drawer-link">03. Live Telemetry</a>
+      <a href="#architecture" class="drawer-link">04. Deep Architecture</a>
+      <a href="#launch" class="drawer-link">05. Launch Directive</a>
+      <a href="../../index.html" class="drawer-link" style="color: var(--cyan); margin-top: 1rem;">
+        <i class="fa-solid fa-arrow-left"></i> Return to Portfolio
+      </a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- ═════════════════════════════════════════════════════════════════════
+         2. CINEMATIC HERO SECTION
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        
+        <div class="hero-content reveal">
+          <div class="pulse-beacon">
+            <span class="beacon-dot"></span>
+            <span>SYSTEMS NOMINAL • ORBIT READY // 2026.4</span>
+          </div>
+
+          <h1 class="hero-title">
+            Next-Generation <br />
+            <span class="gradient-title">Deep Space Exploration</span> <br />
+            &amp; Telemetry Platform
+          </h1>
+
+          <p class="hero-description">
+            Nova Orbit pioneers real-time orbital trajectory telemetry, autonomous interplanetary probe command matrices, and quantum-relayed sensory deep-field observation.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#explorer" class="btn btn-glow-cyan">
+              <i class="fa-solid fa-compass"></i>
+              <span>Launch Explorer</span>
+            </a>
+            <a href="#telemetry" class="btn btn-outline-cyan">
+              <i class="fa-solid fa-satellite-dish"></i>
+              <span>View Telemetry HUD</span>
+            </a>
+          </div>
+
+          <!-- Hero Count-Up Metrics -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-count" data-target="14" data-suffix="+">0</span>
+              <span class="stat-label">Active Spacecraft</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-count" data-target="99.98" data-suffix="%" data-decimals="2">0</span>
+              <span class="stat-label">Telemetry Uptime</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-count" data-target="4.2" data-suffix="B km" data-decimals="1">0</span>
+              <span class="stat-label">Deep-Field Range</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-count" data-target="0.04" data-suffix="ms" data-decimals="2">0</span>
+              <span class="stat-label">Neural Sync Latency</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Orbital Rings Visualizer -->
+        <div class="hero-visual-frame reveal">
+          <div class="orbit-system-canvas">
+            <div class="orbital-ring ring-outer">
+              <div class="orbit-satellite-dot" style="background: var(--violet-light); box-shadow: 0 0 14px var(--violet-light);"></div>
+            </div>
+            <div class="orbital-ring ring-mid">
+              <div class="orbit-satellite-dot"></div>
+            </div>
+            <div class="orbital-ring ring-inner">
+              <div class="orbit-satellite-dot" style="background: #FFFFFF; box-shadow: 0 0 10px #FFFFFF;"></div>
+            </div>
+            <div class="hero-planet-core">
+              <div class="planet-atmosphere"></div>
+              <svg viewBox="0 0 48 48" width="42" height="42" fill="none">
+                <circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <circle cx="24" cy="24" r="6" fill="#FFFFFF"/>
+                <ellipse cx="24" cy="24" rx="22" ry="7" stroke="rgba(0,240,255,0.8)" stroke-width="1.2" transform="rotate(-30 24 24)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════════
+         3. INTERACTIVE MISSION & PLANET EXPLORER
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="explorer-section" id="explorer">
+      <div class="container">
+        
+        <div class="section-head reveal">
+          <div class="pulse-beacon">
+            <i class="fa-solid fa-crosshairs"></i>
+            <span>MISSION PORTFOLIO // REPERTOIRE</span>
+          </div>
+          <h2 class="section-title">
+            Deep Space <span class="gradient-title">Active Missions</span>
+          </h2>
+          <p class="section-subtext">
+            Filter and inspect active interplanetary exploratory probes, lunar surface architectures, Martian rovers, and quantum satellite constellations.
+          </p>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="filter-tabs-wrapper reveal">
+          <button class="filter-tab-btn active" data-filter="all">All Operations (8)</button>
+          <button class="filter-tab-btn" data-filter="deep-space">Deep Space Probes</button>
+          <button class="filter-tab-btn" data-filter="lunar">Lunar Gateway</button>
+          <button class="filter-tab-btn" data-filter="mars">Mars Exploration</button>
+          <button class="filter-tab-btn" data-filter="satellites">Orbital Satellites</button>
+        </div>
+
+        <!-- Interactive 3D Cards Grid -->
+        <div class="mission-grid" id="mission-grid">
+          <!-- Populated dynamically via main.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════════
+         4. LIVE ORBITAL TELEMETRY PANEL
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="telemetry-section" id="telemetry">
+      <div class="container">
+        
+        <div class="section-head reveal">
+          <div class="pulse-beacon">
+            <i class="fa-solid fa-wave-square"></i>
+            <span>REAL-TIME DSN DOWNLINK // LIVE</span>
+          </div>
+          <h2 class="section-title">
+            Orbital <span class="gradient-title">Telemetry Command HUD</span>
+          </h2>
+          <p class="section-subtext">
+            Direct high-frequency downlink streams from active probes. Toggle spacecraft to inspect synchronized attitude vectors, velocities, and simulated radar scans.
+          </p>
+        </div>
+
+        <div class="telemetry-hud-card reveal">
+          
+          <!-- Spacecraft Switcher Tabs -->
+          <div class="telemetry-craft-bar" role="tablist" aria-label="Select Active Spacecraft">
+            <button class="telemetry-craft-btn active" data-craft="ares-v" role="tab" aria-selected="true">
+              <i class="fa-solid fa-satellite"></i> ARES-V SURVEYOR
+            </button>
+            <button class="telemetry-craft-btn" data-craft="artemis-x" role="tab" aria-selected="false">
+              <i class="fa-solid fa-moon"></i> ARTEMIS-X ORBITER
+            </button>
+            <button class="telemetry-craft-btn" data-craft="kepler-deep" role="tab" aria-selected="false">
+              <i class="fa-solid fa-meteor"></i> KEPLER-DEEP PROBE
+            </button>
+            <button class="telemetry-craft-btn" data-craft="helios-iii" role="tab" aria-selected="false">
+              <i class="fa-solid fa-sun"></i> HELIOS-III SCOUT
+            </button>
+          </div>
+
+          <!-- Main HUD Layout -->
+          <div class="hud-main-grid">
+            
+            <!-- Radar & Orbit Visualizer Box -->
+            <div class="radar-display-box">
+              <div class="radar-header">
+                <span class="radar-title"><i class="fa-solid fa-radar"></i> TRAJECTORY RADAR</span>
+                <span class="radar-scan-tag">SWEEP: ACTIVE</span>
+              </div>
+
+              <div class="radar-canvas-container">
+                <canvas id="radar-canvas"></canvas>
+              </div>
+
+              <div class="radar-legend">
+                <div class="legend-item">
+                  <span class="legend-dot legend-cyan"></span>
+                  <span>Spacecraft</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot legend-violet"></span>
+                  <span>Orbital Track</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot legend-orange"></span>
+                  <span>Central Core</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Telemetry Metrics & Ephemeris Coordinates -->
+            <div class="hud-metrics-column">
+              
+              <div class="hud-craft-headline">
+                <div class="hud-craft-title-wrap">
+                  <h3 id="hud-craft-name">ARES-V SURVEYOR</h3>
+                  <span id="hud-craft-dest">Mars Polar Reconnaissance</span>
+                </div>
+                <span id="hud-craft-status" class="hud-status-badge status-active">
+                  TELEMETRY NOMINAL // POLAR INSERTION
+                </span>
+              </div>
+
+              <!-- 6 Metric Cards -->
+              <div class="hud-metrics-grid">
+                
+                <div class="metric-card">
+                  <div class="metric-meta">
+                    <span class="metric-label">Orbital Velocity</span>
+                    <i class="fa-solid fa-gauge-high text-cyan"></i>
+                  </div>
+                  <span class="metric-value" id="val-velocity">24.28 km/s</span>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill" style="width: 72%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-meta">
+                    <span class="metric-label">Range to Earth</span>
+                    <i class="fa-solid fa-globe text-cyan"></i>
+                  </div>
+                  <span class="metric-value" id="val-distance">248.4M km</span>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-purple" style="width: 65%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-meta">
+                    <span class="metric-label">Carrier Signal</span>
+                    <i class="fa-solid fa-signal text-cyan"></i>
+                  </div>
+                  <span class="metric-value" id="val-signal">-78.4 dBm</span>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill" id="bar-signal" style="width: 78%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-meta">
+                    <span class="metric-label">Core Thermal</span>
+                    <i class="fa-solid fa-temperature-half text-cyan"></i>
+                  </div>
+                  <span class="metric-value" id="val-thermal">284 K</span>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill fill-orange" id="bar-thermal" style="width: 48%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-meta">
+                    <span class="metric-label">Propellant Remaining</span>
+                    <i class="fa-solid fa-gas-pump text-cyan"></i>
+                  </div>
+                  <span class="metric-value" id="val-fuel">88%</span>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill" id="bar-fuel" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-meta">
+                    <span class="metric-label">Solar Array Yield</span>
+                    <i class="fa-solid fa-bolt text-cyan"></i>
+                  </div>
+                  <span class="metric-value" id="val-solar">4.8 kW</span>
+                  <div class="metric-bar-track">
+                    <div class="metric-bar-fill" style="width: 82%;"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Ephemeris Coordinates Bar -->
+              <div class="hud-coords-bar">
+                <div class="coord-item">
+                  <span class="coord-label">Right Ascension</span>
+                  <span class="coord-val" id="coord-ra">14h 28m 33.2s</span>
+                </div>
+                <div class="coord-item">
+                  <span class="coord-label">Declination</span>
+                  <span class="coord-val" id="coord-dec">-18° 14' 42.1"</span>
+                </div>
+                <div class="coord-item">
+                  <span class="coord-label">Inclination Angle</span>
+                  <span class="coord-val" id="coord-inc">93.2° (Sun-Sync)</span>
+                </div>
+              </div>
+
+              <!-- Live Telemetry Terminal Stream -->
+              <div class="telemetry-terminal-pane">
+                <div class="terminal-title-bar">
+                  <span><i class="fa-solid fa-terminal"></i> DOWNLINK FRAME STREAM (DSN 70M)</span>
+                  <span class="text-cyan">LIVE 120 FPS BUFFER</span>
+                </div>
+                <div class="terminal-logs-window" id="telemetry-terminal-logs">
+                  <div class="terminal-row">
+                    <span class="time-stamp">[SYSTEM INITIALIZED]</span>
+                    <span class="log-txt">Telemetry downlinks active on X-band &amp; Ka-band carrier frequencies.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Cluster -->
+              <div class="hud-actions-row">
+                <button class="btn btn-glow-cyan" id="btn-telemetry-ping">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Ping Transponder</span>
+                </button>
+                <button class="btn btn-outline-cyan" id="btn-telemetry-recal">
+                  <i class="fa-solid fa-sliders"></i>
+                  <span>Recalibrate Sensors</span>
+                </button>
+                <button class="btn btn-ghost-space" id="btn-telemetry-dump">
+                  <i class="fa-solid fa-file-code"></i>
+                  <span>Diagnostic Dump</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════════
+         5. ARCHITECTURAL CAPABILITY MATRIX
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="arch-section" id="architecture">
+      <div class="container">
+        
+        <div class="section-head reveal">
+          <div class="pulse-beacon">
+            <i class="fa-solid fa-microchip"></i>
+            <span>SYSTEM SPECIFICATIONS // CAPABILITIES</span>
+          </div>
+          <h2 class="section-title">
+            Deep-Space <span class="gradient-title">Engineering Core</span>
+          </h2>
+          <p class="section-subtext">
+            Architected for high-radiation deep space regimes, autonomous navigation outside GPS range, and continuous optical quantum communications.
+          </p>
+        </div>
+
+        <div class="arch-grid">
+          
+          <div class="arch-card reveal">
+            <div class="arch-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="arch-title">Quantum Entangled Relays</h3>
+            <p class="arch-desc">
+              Next-generation optical photon transceivers eliminating RF spectrum bottlenecks, providing secure 10 Gbps data downlink rates across multiple astronomical units.
+            </p>
+          </div>
+
+          <div class="arch-card reveal">
+            <div class="arch-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 class="arch-title">Autonomous Inertial Kinematics</h3>
+            <p class="arch-desc">
+              Deep space navigation without ground station latency. Onboard visual pulsar and star tracker telemetry systems computing delta-v burn vectors in sub-millisecond cycles.
+            </p>
+          </div>
+
+          <div class="arch-card reveal">
+            <div class="arch-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="arch-title">Zero-G Robotic Fabrication</h3>
+            <p class="arch-desc">
+              In-situ additive manufacturing pods synthesizing structural carbon truss extensions, optical fiber cores, and repair modular units directly in vacuum.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════════
+         6. LAUNCH INQUIRY & MISSION DIRECTIVE FORM
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="launch-section" id="launch">
+      <div class="container">
+        
+        <div class="launch-card reveal">
+          <div class="section-head" style="margin-bottom: 1.5rem;">
+            <div class="pulse-beacon">
+              <i class="fa-solid fa-shuttle-space"></i>
+              <span>PAYLOAD RESERVATION // FLIGHT MANIFEST</span>
+            </div>
+            <h2 class="section-title">
+              Submit Launch <span class="gradient-title">Directive</span>
+            </h2>
+            <p class="section-subtext">
+              Commission orbital insertion, satellite deployment, or deep space exploration payload telemetry with the Nova Orbit flight operations division.
+            </p>
+          </div>
+
+          <form id="launch-inquiry-form" class="launch-form" novalidate>
+            
+            <div class="form-row-2col">
+              <div class="field-group">
+                <label for="field-commander" class="field-label">Commander / Officer Name</label>
+                <input type="text" id="field-commander" class="field-input" placeholder="e.g. Dr. H. Vance / Flight Dir." required />
+                <span class="field-error-msg">Please specify commanding officer name.</span>
+              </div>
+
+              <div class="field-group">
+                <label for="field-agency" class="field-label">Requesting Space Entity / Agency</label>
+                <select id="field-agency" class="field-select" required>
+                  <option value="">Select Entity Type</option>
+                  <option value="commercial">Commercial Aerospace Enterprise</option>
+                  <option value="research">University / Astrophysics Institute</option>
+                  <option value="defense">National Defense / Orbital Command</option>
+                  <option value="private">Private Exploratory Consortium</option>
+                </select>
+                <span class="field-error-msg">Please select requesting agency category.</span>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="field-group">
+                <label for="field-orbit" class="field-label">Target Insertion Trajectory</label>
+                <select id="field-orbit" class="field-select" required>
+                  <option value="">Select Trajectory Target</option>
+                  <option value="leo">Low Earth Orbit (LEO 400km)</option>
+                  <option value="geo">Geostationary Transfer Orbit (GTO/GEO)</option>
+                  <option value="lunar">Trans-Lunar Injection (TLI / NRHO)</option>
+                  <option value="mars">Trans-Mars Trajectory (Hohmann Transfer)</option>
+                  <option value="deep">Outer Solar System Heliocentric Escape</option>
+                </select>
+                <span class="field-error-msg">Please select requested orbit trajectory.</span>
+              </div>
+
+              <div class="field-group">
+                <label for="field-email" class="field-label">Telemetry Downlink Email</label>
+                <input type="email" id="field-email" class="field-input" placeholder="commander@aerospace.io" required />
+                <span class="field-error-msg">Valid contact downlink email required.</span>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="field-directive" class="field-label">Mission Directive &amp; Payload Specifications</label>
+              <textarea id="field-directive" class="field-textarea" placeholder="Detail mass margin (kg), transponder frequency band, science objectives, and requested orbital window..." required></textarea>
+              <span class="field-error-msg">Please provide mission specifications (min 12 characters).</span>
+            </div>
+
+            <button type="submit" class="btn btn-glow-cyan" style="width: 100%; padding: 0.95rem; font-size: 1rem;">
+              <i class="fa-solid fa-satellite-dish"></i>
+              <span>Transmit Launch Directive &amp; Verify Trajectory</span>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       7. MISSION DETAILS MODAL
+       ═════════════════════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="mission-modal" role="dialog" aria-modal="true" aria-label="Mission Details">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div id="modal-content-container">
+        <!-- Injected dynamically via main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       8. CYBER TOAST NOTIFICATION
+       ═════════════════════════════════════════════════════════════════════ -->
+  <div class="cyber-toast" id="cyber-toast" role="alert" aria-live="polite">
+    <div class="toast-icon">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="toast-content">
+      <strong class="toast-title">Telemetry Linked</strong>
+      <p class="toast-desc">Transponder carrier locked successfully.</p>
+    </div>
+    <button class="toast-close-btn" aria-label="Dismiss Notification">&times;</button>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       9. MINIMAL COSMIC FOOTER
+       ═════════════════════════════════════════════════════════════════════ -->
+  <footer class="space-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        <div class="nav-brand">
+          <div class="brand-icon-orbit">
+            <div class="brand-ring"></div>
+            <div class="brand-core"></div>
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-title">NOVA ORBIT</span>
+            <span class="brand-subtitle">BY MUHAMMAD HASAN SAJID</span>
+          </div>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#hero" class="footer-link">Home</a></li>
+          <li><a href="#explorer" class="footer-link">Missions</a></li>
+          <li><a href="#telemetry" class="footer-link">Telemetry</a></li>
+          <li><a href="#architecture" class="footer-link">Architecture</a></li>
+          <li><a href="../../index.html" class="footer-link text-cyan">Back to Portfolio</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Nova Orbit. Built by Muhammad Hasan Sajid. All space telemetry systems nominal.</span>
+        <span>Awwwards-Level Space-Tech Frontend Experience</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Smooth Floating Back To Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Engines -->
+  <script src="js/space-canvas.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

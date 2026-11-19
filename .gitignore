@@ -1,0 +1,8 @@
+node_modules/
+portfolio/node_modules/
+.next/
+portfolio/.next/
+*.log
+
+# Local Netlify folder
+.netlify
