@@ -54,12 +54,16 @@ exports.handler = async (event, context) => {
     let payload = {};
     if (event.body) {
       try {
-        payload = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
+        let rawBody = event.body;
+        if (event.isBase64Encoded && typeof rawBody === 'string') {
+          rawBody = Buffer.from(rawBody, 'base64').toString('utf-8');
+        }
+        payload = typeof rawBody === 'string' ? JSON.parse(rawBody) : rawBody;
       } catch (parseErr) {
         return {
           statusCode: 400,
           headers,
-          body: JSON.stringify({ error: 'Invalid JSON payload received.' })
+          body: JSON.stringify({ error: 'Invalid JSON payload received.', details: parseErr.message })
         };
       }
     }
