@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <defs>
+    <linearGradient id="bg-grad-vlc" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#08090C"/>
+      <stop offset="50%" stop-color="#121622"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </linearGradient>
+
+    <radialGradient id="red-radial-glow" cx="400" cy="240" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E10600" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#E10600" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#08090C" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="jacket-body" x1="280" y1="120" x2="520" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E10600"/>
+      <stop offset="50%" stop-color="#B80500"/>
+      <stop offset="100%" stop-color="#7A0300"/>
+    </linearGradient>
+
+    <linearGradient id="gold-trim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E5A93C"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Obsidian Background -->
+  <rect width="800" height="480" fill="url(#bg-grad-vlc)"/>
+  <rect width="800" height="480" fill="url(#red-radial-glow)"/>
+
+  <!-- Subtle Motorsport Diagonal Stripes -->
+  <polygon points="620,0 660,0 520,480 480,480" fill="#E10600" opacity="0.35"/>
+  <polygon points="660,0 680,0 540,480 520,480" fill="#E5A93C" opacity="0.5"/>
+  <polygon points="680,0 720,0 580,480 540,480" fill="#00A19B" opacity="0.35"/>
+
+  <!-- Ground Shadow for Jacket -->
+  <ellipse cx="400" cy="410" rx="220" ry="22" fill="#000" opacity="0.8"/>
+
+  <!-- Centered Motorsport Quilted Puffer Jacket Vector Silhouette -->
+  <g transform="translate(400, 260) scale(0.95) translate(-400, -260)">
+    <!-- Main Torso & Sleeves -->
+    <!-- Left Sleeve -->
+    <path d="M300 150 L220 280 C210 295 230 315 250 305 L310 210 Z" fill="#990400" stroke="#E10600" stroke-width="2"/>
+    <!-- Left Sleeve Quilt Lines -->
+    <line x1="280" y1="180" x2="235" y2="245" stroke="#FF6B6B" stroke-width="1.5" opacity="0.6"/>
+    <line x1="295" y1="205" x2="245" y2="280" stroke="#FF6B6B" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Right Sleeve -->
+    <path d="M500 150 L580 280 C590 295 570 315 550 305 L490 210 Z" fill="#990400" stroke="#E10600" stroke-width="2"/>
+    <!-- Right Sleeve Quilt Lines -->
+    <line x1="520" y1="180" x2="565" y2="245" stroke="#FF6B6B" stroke-width="1.5" opacity="0.6"/>
+    <line x1="505" y1="205" x2="555" y2="280" stroke="#FF6B6B" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Central Body -->
+    <path d="M310 140 C340 150 460 150 490 140 L495 380 C495 390 470 395 400 395 C330 395 305 390 305 380 Z" fill="url(#jacket-body)" stroke="#E10600" stroke-width="2.5"/>
+
+    <!-- Puffer Baffle Quilting Segments -->
+    <path d="M308 190 Q 400 205 492 190" stroke="#4A0200" stroke-width="4"/>
+    <path d="M308 190 Q 400 205 492 190" stroke="#FF6B6B" stroke-width="1.5" opacity="0.7"/>
+
+    <path d="M306 240 Q 400 255 494 240" stroke="#4A0200" stroke-width="4"/>
+    <path d="M306 240 Q 400 255 494 240" stroke="#FF6B6B" stroke-width="1.5" opacity="0.7"/>
+
+    <path d="M306 290 Q 400 305 494 290" stroke="#4A0200" stroke-width="4"/>
+    <path d="M306 290 Q 400 305 494 290" stroke="#FF6B6B" stroke-width="1.5" opacity="0.7"/>
+
+    <path d="M306 340 Q 400 355 494 340" stroke="#4A0200" stroke-width="4"/>
+    <path d="M306 340 Q 400 355 494 340" stroke="#FF6B6B" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Center Heavy-Duty Two-Way Zipper -->
+    <line x1="400" y1="120" x2="400" y2="395" stroke="#1F2937" stroke-width="7"/>
+    <line x1="400" y1="120" x2="400" y2="395" stroke="#E5E7EB" stroke-width="2.5" stroke-dasharray="4 3"/>
+
+    <!-- Thermal High-Stand Collar -->
+    <path d="M340 140 L345 110 C365 105 435 105 455 110 L460 140 Z" fill="#181C26" stroke="#E5A93C" stroke-width="1.5"/>
+
+    <!-- Racing Chest Shield Emblem (Ferrari / Veloce Cavallino shield silhouette) -->
+    <polygon points="345,160 365,160 365,185 355,195 345,185" fill="#E5A93C"/>
+    <polygon points="347,162 363,162 363,183 355,191 347,183" fill="#08090C"/>
+    <circle cx="355" cy="172" r="4" fill="#E10600"/>
+
+    <!-- AMG / Petronas Cyan Sleeve Stripe on Left Arm -->
+    <rect x="240" y="270" width="28" height="6" rx="2" fill="#00A19B" transform="rotate(-35 240 270)"/>
+
+    <!-- Dual Zip Handwarmer Pockets -->
+    <line x1="335" y1="310" x2="355" y2="340" stroke="#111827" stroke-width="4"/>
+    <line x1="465" y1="310" x2="445" y2="340" stroke="#111827" stroke-width="4"/>
+  </g>
+
+  <!-- Floating UI Header Badge -->
+  <g transform="translate(48, 48)">
+    <rect width="240" height="34" rx="6" fill="#0D111A" stroke="rgba(225,6,0,0.5)" stroke-width="1.2"/>
+    <polygon points="14,14 22,14 18,24" fill="#E10600"/>
+    <circle cx="28" cy="19" r="4" fill="#E5A93C"/>
+    <text x="38" y="22" fill="#ffffff" font-family="'Orbitron', monospace, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">VELOCE WINTER 2026</text>
+  </g>
+
+  <!-- Title & Specs Text -->
+  <g transform="translate(48, 120)">
+    <text x="0" y="0" fill="#ffffff" font-family="'Syne', sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">MOTORSPORT OUTERWEAR</text>
+    <text x="0" y="28" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="14" font-weight="500">Ferrari • Mercedes-AMG • Audi Sport • 750-Fill Goose Down</text>
+  </g>
+
+  <!-- Bottom Telemetry Chips -->
+  <g transform="translate(48, 412)">
+    <rect width="140" height="36" rx="4" fill="#0A0D14" stroke="rgba(255,255,255,0.08)"/>
+    <text x="14" y="23" fill="#E10600" font-family="'Orbitron', monospace" font-size="12" font-weight="700">19+ DROPS</text>
+    <text x="96" y="23" fill="#64748B" font-family="'Orbitron', monospace" font-size="10">WINTER</text>
+
+    <rect x="155" width="165" height="36" rx="4" fill="#0A0D14" stroke="rgba(255,255,255,0.08)"/>
+    <text x="169" y="23" fill="#E5A93C" font-family="'Orbitron', monospace" font-size="12" font-weight="700">PKR (Rs.)</text>
+    <text x="245" y="23" fill="#64748B" font-family="'Orbitron', monospace" font-size="10">COD PAKISTAN</text>
+
+    <rect x="330" width="140" height="36" rx="4" fill="#0A0D14" stroke="rgba(255,255,255,0.08)"/>
+    <text x="344" y="23" fill="#10B981" font-family="'Orbitron', monospace" font-size="12" font-weight="700">SERVERLESS</text>
+    <text x="430" y="23" fill="#64748B" font-family="'Orbitron', monospace" font-size="10">API</text>
+  </g>
+</svg>

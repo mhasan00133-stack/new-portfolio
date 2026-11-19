@@ -6,3 +6,13 @@
   from = "/api/book-drive"
   to = "/.netlify/functions/book-drive"
   status = 200
+
+[[redirects]]
+  from = "/api/veloce/products"
+  to = "/.netlify/functions/veloce-products"
+  status = 200
+
+[[redirects]]
+  from = "/api/veloce/orders"
+  to = "/.netlify/functions/veloce-orders"
+  status = 200
