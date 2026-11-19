@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BazaarPK — Pakistan's Premier Online Shopping Platform. Shop Khaadi Lawn, J. Fragrances, Shan Masalas, Mobiles, and Electronics with Cash on Delivery (COD) across Pakistan." />
+  <meta name="author" content="Muhammad Hasan Sajid" />
+  <title>BazaarPK — Pakistan's Premier Online Shopping Bazaar | Cash on Delivery</title>
+
+  <!-- Google Typography Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Strictly Isolated BazaarPK Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       1. TOP UTILITY BAR
+       ═════════════════════════════════════════════════════════════════════ -->
+  <aside class="top-utility-bar">
+    <div class="container utility-flex">
+      <div class="utility-left">
+        <a href="../../index.html" class="back-portfolio-link">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Portfolio</span>
+        </a>
+        <span class="delivery-promo-badge">
+          <i class="fa-solid fa-truck-bolt text-orange"></i>
+          <span>Free Delivery on orders above <strong>Rs. 2,999</strong> across all Pakistan</span>
+        </span>
+      </div>
+
+      <div class="utility-right">
+        <span class="utility-link" id="btn-track-order-nav">
+          <i class="fa-solid fa-location-crosshairs text-orange"></i> Track My Order
+        </span>
+        <span class="utility-link">
+          <i class="fa-solid fa-headset text-orange"></i> UAN: 021-111-BAZAAR
+        </span>
+        <span class="utility-link">
+          <i class="fa-solid fa-shield-halved text-green"></i> 100% Authentic Brands
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       2. MAIN STICKY HEADER
+       ═════════════════════════════════════════════════════════════════════ -->
+  <header class="main-header" id="main-header">
+    <div class="container header-flex">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="header-brand" aria-label="BazaarPK Homepage">
+        <div class="brand-icon-box">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-title">Bazaar<span>PK</span></span>
+          <span class="brand-tagline">Pakistan's Mega Mart</span>
+        </div>
+      </a>
+
+      <!-- Live Search Bar -->
+      <form class="header-search-form" id="search-form" role="search">
+        <div class="search-input-wrap">
+          <input 
+            type="search" 
+            id="main-search-input" 
+            class="search-input" 
+            placeholder="Search in BazaarPK (e.g. Khaadi, J. Perfume, Shan Biryani, Airbuds)..." 
+            autocomplete="off"
+            aria-label="Search products"
+          />
+          <button type="submit" class="search-submit-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </form>
+
+      <!-- Action Buttons (Wishlist, Cart) -->
+      <div class="header-actions">
+        <!-- Wishlist Button -->
+        <button class="action-btn-pill" id="btn-open-wishlist" aria-label="Open Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span>Wishlist</span>
+          <span class="badge-counter" id="wishlist-badge-count">0</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="action-btn-pill bg-orange text-white" id="btn-open-cart" aria-label="Open Shopping Cart" style="background: var(--bazaar-orange); color: #fff; border-color: var(--bazaar-orange);">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-header-price">Rs. 0</span>
+          <span class="badge-counter" id="cart-badge-count" style="background: #0F172A;">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- ═════════════════════════════════════════════════════════════════════
+         3. HERO PROMOTIONAL BANNER & TRUST BAR
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="hero-promo-section">
+      <div class="container">
+        
+        <div class="promo-banner-card">
+          <div class="promo-content">
+            <div class="promo-tag">
+              <i class="fa-solid fa-fire text-yellow"></i>
+              <span>MEGA BACHAT FESTIVAL // 2026</span>
+            </div>
+            <h1 class="promo-title">
+              Pakistan's Biggest <br />
+              <span>Online Shopping</span> Bazaar
+            </h1>
+            <p class="promo-desc">
+              Unbeatable discounts up to <strong>70% OFF</strong> on authentic Khaadi Lawn, J. Fragrances, Audionic Audio, Shan Foods, and Home Appliances with reliable <strong>Cash on Delivery (COD)</strong> nationwide.
+            </p>
+            <div class="promo-cta-row">
+              <a href="#catalog-section" class="btn btn-lg promo-btn-white">
+                <i class="fa-solid fa-bolt"></i> Shop All Deals
+              </a>
+              <a href="#flash-sale" class="btn btn-lg" style="background: rgba(15,23,42,0.6); color: #fff; border: 1px solid rgba(255,255,255,0.3);">
+                <i class="fa-solid fa-stopwatch"></i> Flash Sale
+              </a>
+            </div>
+          </div>
+
+          <div class="promo-visual-col">
+            <div class="promo-feature-badge">
+              <div class="pf-row">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>COD to 100+ Pakistani Cities</span>
+              </div>
+              <div class="pf-row">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>7 Days Hassle-Free Returns</span>
+              </div>
+              <div class="pf-row">
+                <i class="fa-solid fa-tag"></i>
+                <span>Apply Code <strong>DARAZ10</strong> for 10% OFF</span>
+              </div>
+              <div class="pf-row">
+                <i class="fa-solid fa-badge-check"></i>
+                <span>100% Genuine Brand Guarantee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Badges Bar -->
+        <div class="trust-badges-bar">
+          <div class="trust-item">
+            <div class="trust-icon-box">
+              <i class="fa-solid fa-money-bill-wave"></i>
+            </div>
+            <div class="trust-text-wrap">
+              <span class="trust-heading">Cash on Delivery (COD)</span>
+              <span class="trust-sub">Pay at doorstep upon delivery</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon-box">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div class="trust-text-wrap">
+              <span class="trust-heading">Free Delivery Rs. 2,999+</span>
+              <span class="trust-sub">Nationwide TCS &amp; Leopards</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon-box">
+              <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <div class="trust-text-wrap">
+              <span class="trust-heading">7 Days Easy Return</span>
+              <span class="trust-sub">100% Refund guarantee</span>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="trust-text-wrap">
+              <span class="trust-heading">100% Authentic Brands</span>
+              <span class="trust-sub">Original products certified</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════════
+         4. POPULAR CATEGORIES HORIZONTAL PILLS
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="categories-section">
+      <div class="container">
+        
+        <div class="section-header-row">
+          <div class="section-heading-wrap">
+            <i class="fa-solid fa-shapes text-orange"></i>
+            <h2 class="sec-title">Explore Categories</h2>
+          </div>
+          <span class="text-muted" style="font-size: 0.85rem;">Click to filter instantly</span>
+        </div>
+
+        <div class="category-pills-scroll" role="tablist">
+          <button class="cat-pill-btn active" data-cat="all" role="tab">
+            <i class="fa-solid fa-border-all"></i> All Categories (16)
+          </button>
+          <button class="cat-pill-btn" data-cat="fashion" role="tab">
+            <i class="fa-solid fa-shirt"></i> Fashion &amp; Apparel
+          </button>
+          <button class="cat-pill-btn" data-cat="mobiles-tech" role="tab">
+            <i class="fa-solid fa-mobile-screen-button"></i> Mobiles &amp; Tech
+          </button>
+          <button class="cat-pill-btn" data-cat="beauty" role="tab">
+            <i class="fa-solid fa-spa"></i> Beauty &amp; Fragrances
+          </button>
+          <button class="cat-pill-btn" data-cat="groceries" role="tab">
+            <i class="fa-solid fa-mortar-pestle"></i> Groceries &amp; Spices
+          </button>
+          <button class="cat-pill-btn" data-cat="home-living" role="tab">
+            <i class="fa-solid fa-kitchen-set"></i> Home &amp; Appliances
+          </button>
+          <button class="cat-pill-btn" data-cat="sports" role="tab">
+            <i class="fa-solid fa-baseball-bat-ball"></i> Sports &amp; Cricket
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════════
+         5. FLASH SALE SECTION
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="flash-sale-section" id="flash-sale">
+      <div class="container">
+        
+        <div class="flash-header-card">
+          <div class="flash-left">
+            <span class="flash-badge-title">
+              <i class="fa-solid fa-bolt"></i> FLASH SALE // ON SALE NOW
+            </span>
+            <div class="countdown-timer-box">
+              <span>Ending in:</span>
+              <span class="time-digit" id="timer-hours">10</span> :
+              <span class="time-digit" id="timer-minutes">42</span> :
+              <span class="time-digit" id="timer-seconds">18</span>
+            </div>
+          </div>
+          <span style="font-size: 0.82rem; font-weight: 700; background: rgba(0,0,0,0.25); padding: 0.35rem 0.85rem; border-radius: 4px;">
+            🔥 Up to 50% OFF Limited Quantity
+          </span>
+        </div>
+
+        <div class="flash-body-wrap">
+          <div class="flash-products-grid" id="flash-sale-grid">
+            <!-- Populated dynamically via app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════════════════════════════════
+         6. MAIN PRODUCT CATALOG & FILTERS
+         ═════════════════════════════════════════════════════════════════════ -->
+    <section class="catalog-section" id="catalog-section">
+      <div class="container">
+        
+        <div class="catalog-layout-grid">
+          
+          <!-- Left Filter Sidebar -->
+          <aside class="filter-sidebar-card">
+            <h3 class="sidebar-title">
+              <i class="fa-solid fa-sliders text-orange"></i> Filter Products
+            </h3>
+
+            <!-- Price Slider -->
+            <div class="filter-group-block">
+              <label for="price-range-input" class="fg-label">Max Price (PKR)</label>
+              <input 
+                type="range" 
+                id="price-range-input" 
+                class="price-slider-input" 
+                min="1000" 
+                max="35000" 
+                step="500" 
+                value="35000" 
+              />
+              <div class="price-val-row">
+                <span>Rs. 1,000</span>
+                <strong id="price-range-val" class="text-orange">Rs. 35,000</strong>
+              </div>
+            </div>
+
+            <!-- Sort By -->
+            <div class="filter-group-block">
+              <label for="sort-select" class="fg-label">Sort By</label>
+              <select id="sort-select" class="sort-select-input">
+                <option value="popular">Most Popular &amp; Best Sellers</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="discount">Highest % Discount</option>
+                <option value="rating">Top Rated (Customer Reviews)</option>
+              </select>
+            </div>
+
+            <!-- Promotional Voucher Box -->
+            <div class="voucher-promo-box" style="background: var(--bazaar-orange-light); border: 1px dashed var(--bazaar-orange); border-radius: 8px; padding: 1rem;">
+              <strong style="color: var(--bazaar-orange); font-size: 0.85rem; display: block; margin-bottom: 0.35rem;">
+                <i class="fa-solid fa-ticket"></i> Active Promo Vouchers
+              </strong>
+              <div style="font-size: 0.78rem; display: flex; flex-direction: column; gap: 0.25rem;">
+                <span>• Code <strong>DARAZ10</strong>: 10% Extra OFF</span>
+                <span>• Code <strong>BAZAAR15</strong>: 15% Mega Discount</span>
+                <span>• Code <strong>WELCOME</strong>: Rs. 300 OFF</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Main Products Grid Column -->
+          <div class="products-main-col">
+            <div class="catalog-top-bar">
+              <span id="catalog-count">Showing 16 products</span>
+              <span class="text-orange font-bold"><i class="fa-solid fa-bolt"></i> 100% In-Stock &amp; Ready to Ship</span>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+              <!-- Populated dynamically via app.js -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       7. SLIDE-OVER CART DRAWER
+       ═════════════════════════════════════════════════════════════════════ -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-head">
+      <div class="drawer-title-wrap">
+        <i class="fa-solid fa-cart-shopping text-orange"></i>
+        <h3 class="drawer-title">Shopping Cart</h3>
+      </div>
+      <button class="btn-close-drawer" id="btn-close-cart" aria-label="Close Cart">&times;</button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="cart-freeship-banner">
+      <span class="freeship-text" id="cart-freeship-text">
+        Add <strong>Rs. 2,999</strong> to enjoy <strong>Free Delivery</strong> across Pakistan!
+      </span>
+      <div class="freeship-track">
+        <div class="freeship-fill" id="cart-freeship-fill" style="width: 45%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-items-list" id="cart-items-container">
+      <!-- Populated dynamically via app.js -->
+    </div>
+
+    <!-- Coupon Form -->
+    <div class="cart-coupon-wrap">
+      <form id="cart-coupon-form" class="coupon-form-row">
+        <input 
+          type="text" 
+          id="cart-coupon-input" 
+          class="coupon-input" 
+          placeholder="Enter voucher code (e.g. DARAZ10)" 
+        />
+        <button type="submit" class="btn btn-sm btn-outline-orange">Apply</button>
+      </form>
+      <div id="cart-applied-coupon-box"></div>
+    </div>
+
+    <!-- Totals & Proceed CTA -->
+    <div class="cart-drawer-footer">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong id="cart-summary-subtotal">Rs. 0</strong>
+      </div>
+      <div class="summary-row">
+        <span>Delivery Fee (Pakistan)</span>
+        <span id="cart-summary-shipping">Rs. 199</span>
+      </div>
+      <div class="summary-row hidden" id="cart-discount-row">
+        <span class="text-green font-bold">Voucher Discount</span>
+        <strong class="text-green" id="cart-summary-discount">-Rs. 0</strong>
+      </div>
+      <div class="summary-row total-row">
+        <span>Total Payable (PKR)</span>
+        <span class="total-amount" id="cart-summary-total">Rs. 0</span>
+      </div>
+
+      <button class="btn btn-primary btn-lg" id="btn-proceed-checkout" style="width: 100%; margin-top: 0.5rem;">
+        <i class="fa-solid fa-money-bill-wave"></i> Proceed to Checkout (COD)
+      </button>
+    </div>
+  </aside>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       8. SLIDE-OVER WISHLIST DRAWER
+       ═════════════════════════════════════════════════════════════════════ -->
+  <aside class="wishlist-drawer" id="wishlist-drawer" aria-label="Favorites Wishlist">
+    <div class="drawer-head">
+      <div class="drawer-title-wrap">
+        <i class="fa-solid fa-heart text-red"></i>
+        <h3 class="drawer-title">My Wishlist</h3>
+      </div>
+      <button class="btn-close-drawer" id="btn-close-wishlist" aria-label="Close Wishlist">&times;</button>
+    </div>
+    <div class="cart-items-list" id="wishlist-items-container">
+      <!-- Populated dynamically via app.js -->
+    </div>
+  </aside>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       9. CASH ON DELIVERY (COD) CHECKOUT MODAL
+       ═════════════════════════════════════════════════════════════════════ -->
+  <div class="bazaar-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="modal-checkout-title">
+    <div class="modal-content-card">
+      <button class="btn-close-modal" data-action="close-modal" aria-label="Close modal">&times;</button>
+      
+      <div class="checkout-header">
+        <h2 class="checkout-title" id="modal-checkout-title">
+          <i class="fa-solid fa-truck-ramp-box text-orange"></i> Doorstep Delivery &amp; Checkout
+        </h2>
+        <p class="checkout-sub">Complete your shipping address. Pay with Cash on Delivery (COD) when you receive the parcel.</p>
+      </div>
+
+      <form id="checkout-form" novalidate>
+        <div class="checkout-grid-sections">
+          
+          <div class="form-2col">
+            <div class="form-group-block">
+              <label for="checkout-name" class="field-label">Full Name *</label>
+              <input type="text" id="checkout-name" class="field-input" placeholder="e.g. Muhammad Hasan" required />
+              <span class="field-err">Please enter your complete name.</span>
+            </div>
+
+            <div class="form-group-block">
+              <label for="checkout-phone" class="field-label">Pakistani Mobile Number *</label>
+              <input type="tel" id="checkout-phone" class="field-input" placeholder="0300-1234567" required />
+              <span class="field-err">Valid Pakistani mobile number required (03xx-xxxxxxx).</span>
+            </div>
+          </div>
+
+          <div class="form-group-block">
+            <label for="checkout-city" class="field-label">Destination City / Hub *</label>
+            <select id="checkout-city" class="field-select" required>
+              <!-- Populated dynamically via app.js -->
+            </select>
+            <span class="field-err">Please select your city for courier routing.</span>
+          </div>
+
+          <div class="form-group-block">
+            <label for="checkout-address" class="field-label">Delivery Street Address *</label>
+            <textarea id="checkout-address" class="field-textarea" placeholder="House / Flat #, Street, Sector / Mohallah, Landmark..." rows="2" required></textarea>
+            <span class="field-err">Complete address is required for rider dispatch.</span>
+          </div>
+
+          <!-- Payment Method Options -->
+          <div class="form-group-block">
+            <label class="field-label">Payment Method</label>
+            <div class="payment-methods-grid">
+              
+              <label class="payment-card-option">
+                <input type="radio" name="payment_method" value="Cash on Delivery (COD)" checked />
+                <div class="payment-meta">
+                  <span class="payment-title"><i class="fa-solid fa-money-bill-wave text-green"></i> Cash on Delivery (COD)</span>
+                  <span class="payment-sub">Pay in Pakistani Rupees directly to the courier rider at your doorstep.</span>
+                </div>
+              </label>
+
+              <label class="payment-card-option">
+                <input type="radio" name="payment_method" value="JazzCash / EasyPaisa Mobile Wallet" />
+                <div class="payment-meta">
+                  <span class="payment-title"><i class="fa-solid fa-mobile-retro text-orange"></i> JazzCash / EasyPaisa Wallet</span>
+                  <span class="payment-sub">Direct digital wallet transfer upon delivery confirmation.</span>
+                </div>
+              </label>
+
+              <label class="payment-card-option">
+                <input type="radio" name="payment_method" value="Debit / Credit Card (Visa & Mastercard)" />
+                <div class="payment-meta">
+                  <span class="payment-title"><i class="fa-solid fa-credit-card text-blue"></i> Debit / Credit Card (1-Link)</span>
+                  <span class="payment-sub">Secure online card processing powered by PayFast Pakistan.</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Mini Order Summary -->
+          <div class="checkout-order-summary-box">
+            <div class="checkout-items-preview-list" id="checkout-summary-items"></div>
+            
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <strong id="checkout-subtotal">Rs. 0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Shipping Fee:</span>
+              <span id="checkout-shipping">Rs. 199</span>
+            </div>
+            <div class="summary-row hidden" id="checkout-discount-row">
+              <span class="text-green font-bold">Voucher Discount:</span>
+              <strong class="text-green" id="checkout-discount">-Rs. 0</strong>
+            </div>
+            <div class="summary-row total-row">
+              <span>Total Payable at Doorstep:</span>
+              <span class="total-amount" id="checkout-grand-total">Rs. 0</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fa-solid fa-circle-check"></i> Confirm Order with Cash on Delivery
+          </button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       10. ORDER SUCCESS CONFIRMATION MODAL
+       ═════════════════════════════════════════════════════════════════════ -->
+  <div class="bazaar-modal" id="order-success-modal" role="dialog" aria-modal="true">
+    <div class="modal-content-card">
+      <button class="btn-close-modal" data-action="close-modal" aria-label="Close modal">&times;</button>
+      <div id="order-success-body">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       11. QUICK VIEW PRODUCT MODAL
+       ═════════════════════════════════════════════════════════════════════ -->
+  <div class="bazaar-modal" id="quick-view-modal" role="dialog" aria-modal="true">
+    <div class="modal-content-card" style="max-width: 820px;">
+      <button class="btn-close-modal" data-action="close-modal" aria-label="Close modal">&times;</button>
+      <div id="quick-view-content">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       12. ORDER TRACKER MODAL
+       ═════════════════════════════════════════════════════════════════════ -->
+  <div class="bazaar-modal" id="order-tracker-modal" role="dialog" aria-modal="true">
+    <div class="modal-content-card">
+      <button class="btn-close-modal" data-action="close-modal" aria-label="Close modal">&times;</button>
+      
+      <div class="checkout-header">
+        <h2 class="checkout-title"><i class="fa-solid fa-truck-fast text-orange"></i> Live Pakistani Courier Tracker</h2>
+        <p class="checkout-sub">Track real-time shipment updates via TCS, Leopards, and Trax Courier dispatch network.</p>
+      </div>
+
+      <form id="tracker-form" style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+        <input 
+          type="text" 
+          id="tracker-input" 
+          class="field-input" 
+          placeholder="Enter Order / Tracking ID (e.g. BZPK-83921-KHI)" 
+          required 
+        />
+        <button type="submit" class="btn btn-primary">Track</button>
+      </form>
+
+      <div id="tracker-result-container">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       13. FLOATING TOAST NOTIFICATION
+       ═════════════════════════════════════════════════════════════════════ -->
+  <div class="bazaar-toast" id="bazaar-toast" role="alert" aria-live="polite">
+    <div class="toast-icon bg-orange text-white">
+      <i class="fa-solid fa-bag-shopping"></i>
+    </div>
+    <div class="toast-content">
+      <strong class="toast-t">Notification</strong>
+      <span class="toast-m">Action completed successfully.</span>
+    </div>
+  </div>
+
+  <!-- ═════════════════════════════════════════════════════════════════════
+       14. PAKISTANI E-COMMERCE FOOTER
+       ═════════════════════════════════════════════════════════════════════ -->
+  <footer class="bazaar-footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="header-brand" style="margin-bottom: 0.5rem;">
+            <div class="brand-icon-box">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-title" style="color: #fff;">Bazaar<span>PK</span></span>
+              <span class="brand-tagline" style="color: #38BDF8;">BY MUHAMMAD HASAN SAJID</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Pakistan's trusted multi-category online shopping platform. Delivering genuine fashion, electronics, groceries, and home appliances with reliable Cash on Delivery to over 100 cities nationwide.
+          </p>
+          <div class="payment-badges-row">
+            <span class="pay-badge"><i class="fa-solid fa-money-bill-wave text-green"></i> COD</span>
+            <span class="pay-badge"><i class="fa-solid fa-mobile-screen text-orange"></i> JazzCash</span>
+            <span class="pay-badge"><i class="fa-solid fa-wallet text-green"></i> EasyPaisa</span>
+            <span class="pay-badge"><i class="fa-brands fa-cc-visa text-blue"></i> Visa</span>
+            <span class="pay-badge"><i class="fa-brands fa-cc-mastercard text-red"></i> Mastercard</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Customer Care</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home" onclick="window.BazaarPK.trackOrderById('');">Track Order Status</a></li>
+            <li><a href="#home">How to Buy with Cash on Delivery</a></li>
+            <li><a href="#home">Returns &amp; Refund Policy</a></li>
+            <li><a href="#home">Shipping &amp; Delivery Timelines</a></li>
+            <li><a href="#home">Help Center &amp; FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Top Pakistani Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="#catalog-section">Khaadi &amp; Gul Ahmed Lawn Suits</a></li>
+            <li><a href="#catalog-section">J. (Junaid Jamshed) Perfumes</a></li>
+            <li><a href="#catalog-section">Audionic &amp; Anker Earbuds</a></li>
+            <li><a href="#catalog-section">Shan Spices &amp; Tapal Danedar Tea</a></li>
+            <li><a href="#catalog-section">Peshawari Chappal Handcrafted</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Delivery Partners</h4>
+          <ul class="footer-links-list">
+            <li><i class="fa-solid fa-truck text-orange"></i> TCS Express Worldwide</li>
+            <li><i class="fa-solid fa-truck text-orange"></i> Leopards Courier Services</li>
+            <li><i class="fa-solid fa-truck text-orange"></i> Trax Logistics Pakistan</li>
+            <li><i class="fa-solid fa-truck text-orange"></i> Pakistan Post Express</li>
+            <li style="margin-top: 0.5rem;">
+              <a href="../../index.html" style="color: #38BDF8; font-weight: 700;">
+                <i class="fa-solid fa-arrow-left"></i> Return to Main Portfolio
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 BazaarPK. Crafted by Muhammad Hasan Sajid. All rights reserved across Pakistan.</span>
+        <span>Awwwards-Quality 100% Frontend Pakistani E-Commerce Platform</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Modular Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
