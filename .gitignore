@@ -1,8 +1,5 @@
 node_modules/
-portfolio/node_modules/
+portfolio/
 .next/
-portfolio/.next/
 *.log
-
-# Local Netlify folder
 .netlify

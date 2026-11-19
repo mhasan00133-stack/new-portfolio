@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hire Muhammad Hasan Sajid — Creative Frontend Developer available for freelance work and full-time roles. Let's build something extraordinary." />
+  <title>Contact | Webvibex — Muhammad Hasan Sajid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <header id="navbar">
+    <nav class="nav-inner container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo"><span>W</span><span class="brand-dot"></span></div>
+        <div class="brand-text"><span class="brand-name">Webvibex</span><span class="brand-sub">by Hasan Sajid</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="about.html"    class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html"  class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="./assets/Muhammad_Hasan_Sajid_Modern_Resume.pdf" download="Muhammad_Hasan_Sajid_Modern_Resume.pdf" class="btn btn-ghost btn-sm"><i class="fa-solid fa-download"></i> Download CV</a>
+        <a href="contact.html" class="btn btn-glow btn-sm"><i class="fa-solid fa-bolt"></i> Hire Me</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="projects.html" class="mobile-link">Projects</a>
+      <a href="contact.html" class="mobile-link active">Contact</a>
+      <div class="mobile-btns">
+        <a href="./assets/Muhammad_Hasan_Sajid_Modern_Resume.pdf" download="Muhammad_Hasan_Sajid_Modern_Resume.pdf" class="btn btn-ghost btn-sm"><i class="fa-solid fa-download"></i> Download CV</a>
+        <a href="contact.html" class="btn btn-glow btn-full"><i class="fa-solid fa-bolt"></i> Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ PAGE HEADER ═══ -->
+    <section class="page-header">
+      <div class="container">
+        <span class="section-label reveal">Touchdown</span>
+        <h1 class="page-title reveal">Let's build something <span class="gradient-text">extraordinary</span></h1>
+        <p class="page-sub reveal">Looking for a Creative Frontend Developer for freelance work or a full-time role? I'd love to hear from you. I typically respond within 24 hours.</p>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT LAYOUT ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Form -->
+          <div class="glass-card contact-form-card reveal">
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="cName">Full Name</label>
+                  <input type="text" id="cName" name="name" placeholder="Your full name" required />
+                  <span class="ferr"></span>
+                </div>
+                <div class="form-field">
+                  <label for="cEmail">Email Address</label>
+                  <input type="email" id="cEmail" name="email" placeholder="you@company.com" required />
+                  <span class="ferr"></span>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="cSubject">Subject</label>
+                <input type="text" id="cSubject" name="subject" placeholder="Freelance Project / Full-Time Role / Collaboration" />
+              </div>
+              <div class="form-field">
+                <label for="cMessage">Message</label>
+                <textarea id="cMessage" name="message" rows="6" placeholder="Tell me about your project, timeline, budget, and goals..." required></textarea>
+                <span class="ferr"></span>
+              </div>
+              <button type="submit" class="btn btn-glow btn-full" id="submitBtn">
+                <i class="fa-solid fa-paper-plane"></i> <span>Send Message</span>
+              </button>
+            </form>
+            <!-- Success -->
+            <div class="form-success" id="formSuccess" hidden>
+              <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h3>Message Sent! 🎉</h3>
+              <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+              <button class="btn btn-ghost btn-sm" id="resetFormBtn">Send Another</button>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="contact-sidebar">
+
+            <!-- Direct Contact Cards -->
+            <div class="glass-card contact-method-card reveal">
+              <h3 class="card-heading"><i class="fa-solid fa-address-book"></i> Direct Contact</h3>
+              <div class="method-list">
+                <a href="mailto:mhasan00133@gmail.com" class="method-item">
+                  <div class="method-icon mi-cyan"><i class="fa-solid fa-envelope"></i></div>
+                  <div class="method-info"><strong>Email</strong><span>mhasan00133@gmail.com</span></div>
+                  <i class="fa-solid fa-arrow-up-right-from-square method-arrow"></i>
+                </a>
+                <a href="https://wa.me/923408765743" target="_blank" rel="noopener" class="method-item">
+                  <div class="method-icon mi-emerald"><i class="fa-brands fa-whatsapp"></i></div>
+                  <div class="method-info"><strong>WhatsApp</strong><span>03408765743</span></div>
+                  <i class="fa-solid fa-arrow-up-right-from-square method-arrow"></i>
+                </a>
+                <a href="https://github.com/mhasan00133-stack" target="_blank" rel="noopener" class="method-item">
+                  <div class="method-icon mi-dark"><i class="fa-brands fa-github"></i></div>
+                  <div class="method-info"><strong>GitHub</strong><span>mhasan00133-stack</span></div>
+                  <i class="fa-solid fa-arrow-up-right-from-square method-arrow"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Copy Email -->
+            <div class="glass-card copy-card reveal">
+              <p class="copy-label">Quick Copy</p>
+              <p class="copy-email">mhasan00133@gmail.com</p>
+              <button class="btn btn-ghost btn-full" id="copyEmailBtn">
+                <i class="fa-regular fa-copy" id="copyIcon"></i>
+                <span id="copyText">Copy Email Address</span>
+              </button>
+            </div>
+
+            <!-- Social Links -->
+            <div class="glass-card social-card reveal">
+              <h3 class="card-heading"><i class="fa-solid fa-share-nodes"></i> Socials</h3>
+              <div class="method-list">
+                <a href="https://instagram.com/webvibex" target="_blank" rel="noopener" class="method-item mi-insta">
+                  <div class="method-icon mi-pink"><i class="fa-brands fa-instagram"></i></div>
+                  <div class="method-info"><strong>Instagram</strong><span>@webvibex</span></div>
+                  <i class="fa-solid fa-arrow-up-right-from-square method-arrow"></i>
+                </a>
+                <a href="https://tiktok.com/@webvibex" target="_blank" rel="noopener" class="method-item">
+                  <div class="method-icon mi-dark"><i class="fa-brands fa-tiktok"></i></div>
+                  <div class="method-info"><strong>TikTok</strong><span>@webvibex</span></div>
+                  <i class="fa-solid fa-arrow-up-right-from-square method-arrow"></i>
+                </a>
+                <a href="https://github.com/mhasan00133-stack" target="_blank" rel="noopener" class="method-item">
+                  <div class="method-icon mi-dark"><i class="fa-brands fa-github"></i></div>
+                  <div class="method-info"><strong>GitHub</strong><span>mhasan00133-stack</span></div>
+                  <i class="fa-solid fa-arrow-up-right-from-square method-arrow"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="glass-card avail-card reveal">
+              <div class="avail-header">
+                <span class="pulse-dot"></span>
+                <strong>Available for Work</strong>
+              </div>
+              <p>Open to freelance projects, long-term collaborations, and full-time frontend developer roles. Whether you're a recruiter, startup founder, or agency — let's talk.</p>
+            </div>
+
+          </div>
+        </div><!-- /contact-grid -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand brand-sm"><div class="brand-logo brand-logo-sm"><span>W</span><span class="brand-dot"></span></div><span class="brand-name-sm">Webvibex</span></div>
+        <p class="footer-copy">&copy; <span id="footerYear"></span> Webvibex. Designed &amp; Developed by <strong>Muhammad Hasan Sajid</strong></p>
+      </div>
+      <nav class="footer-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></nav>
+      <div class="footer-socials">
+        <a href="https://instagram.com/webvibex" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/@webvibex" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://github.com/mhasan00133-stack" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="alert"><i class="fa-solid fa-check-circle"></i> <span id="toastMsg">Email copied!</span></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

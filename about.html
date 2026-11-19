@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Muhammad Hasan Sajid — Creative Frontend Developer, Software Engineering student, and founder of Webvibex." />
+  <title>About | Webvibex — Muhammad Hasan Sajid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <header id="navbar">
+    <nav class="nav-inner container">
+      <a href="index.html" class="brand">
+        <div class="brand-logo"><span>W</span><span class="brand-dot"></span></div>
+        <div class="brand-text"><span class="brand-name">Webvibex</span><span class="brand-sub">by Hasan Sajid</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="about.html"    class="nav-link active">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="./assets/Muhammad_Hasan_Sajid_Modern_Resume.pdf" download="Muhammad_Hasan_Sajid_Modern_Resume.pdf" class="btn btn-ghost btn-sm"><i class="fa-solid fa-download"></i> Download CV</a>
+        <a href="contact.html" class="btn btn-glow btn-sm"><i class="fa-solid fa-bolt"></i> Hire Me</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link active">About</a>
+      <a href="projects.html" class="mobile-link">Projects</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+      <div class="mobile-btns">
+        <a href="./assets/Muhammad_Hasan_Sajid_Modern_Resume.pdf" download="Muhammad_Hasan_Sajid_Modern_Resume.pdf" class="btn btn-ghost btn-sm"><i class="fa-solid fa-download"></i> Download CV</a>
+        <a href="contact.html" class="btn btn-glow btn-full"><i class="fa-solid fa-bolt"></i> Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══ PAGE HEADER ═══ -->
+    <section class="page-header">
+      <div class="container">
+        <span class="section-label reveal">The Core</span>
+        <h1 class="page-title reveal">About Me &amp; <span class="gradient-text">Tech Stack</span></h1>
+        <p class="page-sub reveal">Creative Frontend Developer. Software Engineering student. Building out-of-this-world web experiences.</p>
+      </div>
+    </section>
+
+    <!-- ═══ BIO SECTION ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Bio card -->
+          <div class="glass-card about-bio reveal">
+            <div class="about-icon-wrap"><i class="fa-solid fa-user-astronaut"></i></div>
+            <h2>Muhammad Hasan Sajid</h2>
+            <p>
+              I'm a <strong>19-year-old Creative Frontend Developer</strong> and <strong>Software Engineering student at Aptech</strong>.
+              As the founder of <strong class="gradient-text">Webvibex</strong>, I specialize in crafting immersive, high-performance
+              web experiences that push the boundaries of modern design. From glassmorphism interfaces to 3D levitation effects —
+              I build websites that feel like they defy gravity.
+            </p>
+            <p>
+              I believe great interfaces should be invisible — users should simply enjoy the experience.
+              Every pixel matters, every millisecond counts, and every interaction should feel effortless.
+            </p>
+            <div class="bio-chips">
+              <span class="chip chip-cyan"><i class="fa-solid fa-location-dot"></i> Pakistan 🇵🇰</span>
+              <span class="chip chip-violet"><i class="fa-solid fa-graduation-cap"></i> Aptech — SE</span>
+              <span class="chip chip-cyan"><i class="fa-solid fa-code"></i> Frontend Dev</span>
+              <span class="chip chip-violet"><i class="fa-solid fa-palette"></i> UI/UX Design</span>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="glass-card about-stat-card reveal">
+            <div class="stat-icon-wrap si-cyan"><i class="fa-solid fa-rocket"></i></div>
+            <div class="stat-big"><span class="counter" data-target="4">0</span>+</div>
+            <p class="stat-label">Live Projects</p>
+          </div>
+
+          <div class="glass-card about-stat-card reveal">
+            <div class="stat-icon-wrap si-violet"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <div class="stat-big">100<span class="stat-pct">%</span></div>
+            <p class="stat-label">Responsive Rate</p>
+          </div>
+
+          <!-- Certification -->
+          <div class="glass-card about-cert reveal">
+            <div class="cert-glow" aria-hidden="true"></div>
+            <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+            <span class="cert-org">Aptech Learning</span>
+            <h3>Certified Frontend Developer</h3>
+            <p>HTML · CSS · JavaScript · Responsive Design</p>
+            <div class="cert-bar"><div class="cert-fill"></div></div>
+          </div>
+
+          <!-- Education -->
+          <div class="glass-card about-edu reveal">
+            <h3 class="card-heading"><i class="fa-solid fa-book-open-reader"></i> Education</h3>
+            <ul class="edu-timeline">
+              <li><div class="edu-dot dot-active"></div><div><strong>Software Engineering</strong><span>Aptech — Currently Pursuing</span></div></li>
+              <li><div class="edu-dot dot-done"></div><div><strong>Frontend Dev Certification</strong><span>Aptech — Certified ✓</span></div></li>
+              <li><div class="edu-dot dot-done"></div><div><strong>Intermediate</strong><span>Completed ✓</span></div></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Tech Stack</span>
+          <h2 class="section-title">Tools &amp; <span class="gradient-text">Technologies</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="glass-card skill-group reveal">
+            <div class="sg-head"><div class="sg-icon sg-cyan"><i class="fa-brands fa-html5"></i></div><h3>Frontend</h3></div>
+            <div class="skill-tags">
+              <span class="stag stag-cyan">HTML5</span><span class="stag stag-cyan">CSS3</span>
+              <span class="stag stag-cyan">JavaScript (ES6+)</span><span class="stag stag-cyan">Tailwind CSS</span>
+              <span class="stag stag-cyan">Bootstrap</span><span class="stag stag-cyan">Responsive Design</span>
+              <span class="stag stag-cyan">Flexbox &amp; Grid</span><span class="stag stag-cyan">Animations</span>
+            </div>
+          </div>
+          <div class="glass-card skill-group reveal">
+            <div class="sg-head"><div class="sg-icon sg-violet"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>Design &amp; UI/UX</h3></div>
+            <div class="skill-tags">
+              <span class="stag stag-violet">Figma</span><span class="stag stag-violet">UI/UX Principles</span>
+              <span class="stag stag-violet">Glassmorphism</span><span class="stag stag-violet">Dark Mode Design</span>
+              <span class="stag stag-violet">Color Theory</span><span class="stag stag-violet">Typography</span>
+            </div>
+          </div>
+          <div class="glass-card skill-group reveal">
+            <div class="sg-head"><div class="sg-icon sg-emerald"><i class="fa-solid fa-terminal"></i></div><h3>Tools &amp; Workflow</h3></div>
+            <div class="skill-tags">
+              <span class="stag stag-emerald">Git &amp; GitHub</span><span class="stag stag-emerald">VS Code</span>
+              <span class="stag stag-emerald">Chrome DevTools</span><span class="stag stag-emerald">npm basics</span>
+              <span class="stag stag-emerald">Command Line</span><span class="stag stag-emerald">Web Performance</span>
+            </div>
+          </div>
+          <div class="glass-card skill-group reveal">
+            <div class="sg-head"><div class="sg-icon sg-amber"><i class="fa-brands fa-react"></i></div><h3>Learning Next</h3></div>
+            <div class="skill-tags">
+              <span class="stag stag-amber">React.js</span><span class="stag stag-amber">Node.js</span>
+              <span class="stag stag-amber">TypeScript</span><span class="stag stag-amber">Next.js</span>
+              <span class="stag stag-amber">REST APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="cta-banner reveal">
+      <div class="container cta-inner">
+        <div><h2>Want to work together?</h2><p>I'm always open to freelance projects, full-time roles, and creative collaborations.</p></div>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-glow btn-lg"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+          <a href="./assets/Muhammad_Hasan_Sajid_Modern_Resume.pdf" download="Muhammad_Hasan_Sajid_Modern_Resume.pdf" class="btn btn-ghost btn-lg"><i class="fa-solid fa-download"></i> Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand brand-sm"><div class="brand-logo brand-logo-sm"><span>W</span><span class="brand-dot"></span></div><span class="brand-name-sm">Webvibex</span></div>
+        <p class="footer-copy">&copy; <span id="footerYear"></span> Webvibex. Designed &amp; Developed by <strong>Muhammad Hasan Sajid</strong></p>
+      </div>
+      <nav class="footer-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></nav>
+      <div class="footer-socials">
+        <a href="https://instagram.com/webvibex" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/@webvibex" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://github.com/mhasan00133-stack" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
